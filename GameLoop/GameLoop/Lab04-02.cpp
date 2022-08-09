@@ -90,6 +90,8 @@ void GameInit()
 // atualiza a lógica do jogo
 void GameUpdate()
 {
+	posX = posX + velX;
+	posY = posY + velY;
 
 	testCollision(posX, posY);
     // sai com o pressionamento da tecla ESC
@@ -255,9 +257,7 @@ LRESULT CALLBACK WinProc (HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
 // -----------------------------------------------------------------------
 
 void bitmapMoving() {
-	posX++;
-	posY++;
-	BitBlt(hdc, posX + velX, posY + velY, bm.bmWidth, bm.bmHeight, hdcImg, 0, 0, SRCCOPY);
+	BitBlt(hdc, posX, posY, bm.bmWidth, bm.bmHeight, hdcImg, 0, 0, SRCCOPY);
 }
 
 void testCollision(int posX, int posY) {
@@ -266,12 +266,11 @@ void testCollision(int posX, int posY) {
 	if (posY + bm.bmHeight > windowHeight)
 		velY = -velY;
 
-
-	if (posX + bm.bmWidth < windowWidth)
-		velX = +velX;
-	if (posY + bm.bmHeight < windowHeight)
-		velY = +velY;
-
+	if (posX < 0)
+		velX = -velX;
+	if (posY < 0)
+		velY = -velY;
+	
 }
 
 // -----------------------------------------------------------------------
