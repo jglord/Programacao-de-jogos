@@ -15,6 +15,11 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="GameLoop.cpp">
+      <Filter>Arquivos de Origem</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
     <ClInclude Include="Resources.h">
       <Filter>Arquivos de Cabeçalho</Filter>
     </ClInclude>
@@ -23,10 +28,5 @@
     <ResourceCompile Include="Resources.rc">
       <Filter>Arquivos de Recurso</Filter>
     </ResourceCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="Lab04-01.cpp">
-      <Filter>Arquivos de Origem</Filter>
-    </ClCompile>
   </ItemGroup>
 </Project>

@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.28803.352
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "InputKeys", "InputKeys\InputKeys.vcxproj", "{6CA29CCE-0882-4F83-88D0-9947E243AB37}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GameLoop", "Lab04\GameLoop\GameLoop\GameLoop.vcxproj", "{2D82B765-521D-48D8-A4DC-FA11B138D589}"
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lab04-01", "Lab04\GameLoop\GameLoop\GameLoop.vcxproj", "{2D82B765-521D-48D8-A4DC-FA11B138D589}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lab04-02", "GameLoop\GameLoop\Lab04-02.vcxproj", "{3DF5C669-83ED-41BB-AC03-B25C8C8A271A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -31,6 +33,14 @@ Global
 		{2D82B765-521D-48D8-A4DC-FA11B138D589}.Release|x64.Build.0 = Release|x64
 		{2D82B765-521D-48D8-A4DC-FA11B138D589}.Release|x86.ActiveCfg = Release|Win32
 		{2D82B765-521D-48D8-A4DC-FA11B138D589}.Release|x86.Build.0 = Release|Win32
+		{3DF5C669-83ED-41BB-AC03-B25C8C8A271A}.Debug|x64.ActiveCfg = Debug|x64
+		{3DF5C669-83ED-41BB-AC03-B25C8C8A271A}.Debug|x64.Build.0 = Debug|x64
+		{3DF5C669-83ED-41BB-AC03-B25C8C8A271A}.Debug|x86.ActiveCfg = Debug|Win32
+		{3DF5C669-83ED-41BB-AC03-B25C8C8A271A}.Debug|x86.Build.0 = Debug|Win32
+		{3DF5C669-83ED-41BB-AC03-B25C8C8A271A}.Release|x64.ActiveCfg = Release|x64
+		{3DF5C669-83ED-41BB-AC03-B25C8C8A271A}.Release|x64.Build.0 = Release|x64
+		{3DF5C669-83ED-41BB-AC03-B25C8C8A271A}.Release|x86.ActiveCfg = Release|Win32
+		{3DF5C669-83ED-41BB-AC03-B25C8C8A271A}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

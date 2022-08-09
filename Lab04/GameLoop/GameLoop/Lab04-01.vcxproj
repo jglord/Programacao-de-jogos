@@ -160,7 +160,7 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Lab04-01.cpp" />
+    <ClCompile Include="GameLoop.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Resources.h" />

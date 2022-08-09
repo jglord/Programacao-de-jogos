@@ -1,8 +1,8 @@
 /**********************************************************************************
-// GameLoop
+// Lab04-01
 // 
 // Criação:     19 Ago 2011
-// Atualização: 31 Jul 2021
+// Atualização: 09 Ago 2022
 // Compilador:  Visual C++ 2019
 //
 // Descrição: Esqueleto de um laço de tempo real para criar um jogo.
@@ -12,6 +12,9 @@
 #include <windows.h>        // inclui funções do windows
 #include <windowsx.h>       // inclui funções extras do windows
 #include "Resources.h"      // definições dos recursos utilizados
+#include <random>
+
+using namespace std;
 
 // protótipo do procedimento da janela
 LRESULT CALLBACK WinProc (HWND, UINT, WPARAM, LPARAM);
@@ -25,18 +28,48 @@ bool fullScreen = false;    // tela cheia ou modo janela
 
 bool vkKeys[256] = { 0 };   // estado das teclas do teclado
 HWND hwnd;                  // identificador da janela
+HDC hdc;
+COLORREF color;
+
+// variaveis para desenhar pixeis
+int pixelX = 25;
+int pixelY = 25;
 
 // -----------------------------------------------------------------------
 // funções do jogo
 
+// Gerando numero randomico
+int randInt() {
+	
+	random_device rd;
+	mt19937 mt(rd());
+	uniform_int_distribution<int> dist(0, 960);
+	
+	return dist(mt);
+}
+
+int randIntColor() {
+
+	random_device rd;
+	mt19937 mt(rd());
+	uniform_int_distribution<int> dist(0, 255);
+
+	return dist(mt);
+}
+
 // inicializa o jogo alocando recursos
 void GameInit()
 {
+	hdc = GetDC(hwnd);
 }
 
 // atualiza a lógica do jogo
 void GameUpdate()
 {
+
+	pixelX = randInt();
+	pixelY = randInt();
+	color = RGB(randIntColor, randIntColor, randIntColor);
     // sai com o pressionamento da tecla ESC
     if (vkKeys[VK_ESCAPE])
         PostMessage(hwnd, WM_DESTROY, 0, 0);
@@ -45,11 +78,13 @@ void GameUpdate()
 // desenha o próximo quadro do jogo
 void GameDraw()
 {	
+	SetPixel(hdc, pixelX, pixelY, RGB(color, color, color));
 }
 
 // finaliza o jogo desalocando recursos
 void GameFinalize()
 {	
+	ReleaseDC(hwnd, hdc);
 }
 
 // -----------------------------------------------------------------------

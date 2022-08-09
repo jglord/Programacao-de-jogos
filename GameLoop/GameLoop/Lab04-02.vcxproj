@@ -20,11 +20,10 @@
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
-    <ProjectGuid>{2D82B765-521D-48D8-A4DC-FA11B138D589}</ProjectGuid>
+    <ProjectGuid>{3DF5C669-83ED-41BB-AC03-B25C8C8A271A}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>GameLoop</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>Lab04-01</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
@@ -160,7 +159,7 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Lab04-01.cpp" />
+    <ClCompile Include="Lab04-02.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Resources.h" />
