@@ -124,7 +124,7 @@ inline void Window::Title(const string title)
 
 // retorna o modo atual da janela (FULLSCREEN/WINDOWED)
 inline int Window::Mode() const 
-{ return windowMode;   }
+{ return windowMode; }
 
 // retorna o centro da janela no eixo horizontal
 inline float Window::CenterX() const

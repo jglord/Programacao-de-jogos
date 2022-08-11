@@ -176,7 +176,7 @@ LRESULT CALLBACK Window::WinProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lPar
     {
         // tecla pressionada
     case WM_KEYDOWN:
-        windowKeys[wParam] = true;
+		windowKeys[wParam] = true;
         return 0;
 
         // tecla liberada

@@ -38,7 +38,7 @@ public:
 void WinGame::Init() 
 {
 	textSize << "Tamanho: " << window->Width() << " x " << window->Height();
-	textMode << "Formato: " << (window->Mode() == WINDOWED ? "Em Janela" : "Tela Cheia"); 
+	textMode << "Formato: " << (window->Mode() == WINDOWED ? "Em Janela" : "Tela Cheia");
 }
 
 // ------------------------------------------------------------------------------
@@ -69,8 +69,8 @@ void WinGame::Finalize()
 }	
 
 
-// ------------------------------------------------------------------------------
-//                                  WinMain                                      
+/* ------------------------------------------------------------------------------
+                                WinMain                                      
 // ------------------------------------------------------------------------------
 
 int APIENTRY WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance, 
@@ -89,5 +89,4 @@ int APIENTRY WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance,
 	engine->Start(new WinGame());
 }
 
-// ----------------------------------------------------------------------------
-
+// ----------------------------------------------------------------------------*/

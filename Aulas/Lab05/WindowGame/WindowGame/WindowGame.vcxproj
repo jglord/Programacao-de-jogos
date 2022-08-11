@@ -157,6 +157,7 @@
   <ItemGroup>
     <ClCompile Include="Engine.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="Lab5.cpp" />
     <ClCompile Include="Window.cpp" />
     <ClCompile Include="WinGame.cpp" />
   </ItemGroup>
