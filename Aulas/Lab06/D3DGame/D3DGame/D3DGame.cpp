@@ -1,18 +1,19 @@
 /**********************************************************************************
 // D3DGame
 // 
-// Criação:     06 Mar 2012
-// Atualização: 08 Ago 2021
+// Criaï¿½ï¿½o:     06 Mar 2012
+// Atualizaï¿½ï¿½o: 08 Ago 2021
 // Compilador:  Visual C++ 2019
 //
-// Descrição:   Ilustra utilização da classe Graphics construindo uma 
-//              janela vazia que está sendo atualizada com o Direct3D.
+// Descriï¿½ï¿½o:   Ilustra utilizaï¿½ï¿½o da classe Graphics construindo uma 
+//              janela vazia que estï¿½ sendo atualizada com o Direct3D.
 //
 **********************************************************************************/
 
 #include "Resources.h"
 #include "Engine.h"
 #include "Game.h"
+
 
 // ------------------------------------------------------------------------------
 
