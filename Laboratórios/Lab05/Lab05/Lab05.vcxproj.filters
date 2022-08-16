@@ -27,9 +27,6 @@
     <ClCompile Include="Engine.cpp">
       <Filter>Engine\Arquivos de Origem</Filter>
     </ClCompile>
-    <ClCompile Include="WinGame.cpp">
-      <Filter>Game</Filter>
-    </ClCompile>
     <ClCompile Include="Lab5.cpp">
       <Filter>Game</Filter>
     </ClCompile>

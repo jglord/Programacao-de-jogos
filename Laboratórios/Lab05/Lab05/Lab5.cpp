@@ -39,8 +39,8 @@ void Lab5::Init() {
 	posX2 = 50;
 	posY2 = 50;
 
-	velX1 = 2;
-	velY1 = 2;
+	velX1 = 10;
+	velY1 = 10;
 
 	velX2 = 5;
 	velY2 = 5;
@@ -100,7 +100,7 @@ int APIENTRY WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance,
 	engine->window->Mode(WINDOWED);
 	engine->window->Size(960, 540);
 	engine->window->Color(240, 240, 140);
-	engine->window->Title("Window Game");
+	engine->window->Title("Laboratório 05");
 	engine->window->Icon(IDI_ICON);
 	engine->window->Cursor(IDC_CURSOR);
 
