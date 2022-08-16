@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lab04-02", "GameLoop\GameLo
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WindowGame", "Aulas\Lab05\WindowGame\WindowGame\WindowGame.vcxproj", "{67F6A3D7-3D74-458D-8B9B-254B04A82C34}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Lab05", "Laboratórios\Lab05\Lab05\Lab05.vcxproj", "{C6B735FB-321C-49BC-8668-C3F3672D8ED5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -51,6 +53,14 @@ Global
 		{67F6A3D7-3D74-458D-8B9B-254B04A82C34}.Release|x64.Build.0 = Release|x64
 		{67F6A3D7-3D74-458D-8B9B-254B04A82C34}.Release|x86.ActiveCfg = Release|Win32
 		{67F6A3D7-3D74-458D-8B9B-254B04A82C34}.Release|x86.Build.0 = Release|Win32
+		{C6B735FB-321C-49BC-8668-C3F3672D8ED5}.Debug|x64.ActiveCfg = Debug|x64
+		{C6B735FB-321C-49BC-8668-C3F3672D8ED5}.Debug|x64.Build.0 = Debug|x64
+		{C6B735FB-321C-49BC-8668-C3F3672D8ED5}.Debug|x86.ActiveCfg = Debug|Win32
+		{C6B735FB-321C-49BC-8668-C3F3672D8ED5}.Debug|x86.Build.0 = Debug|Win32
+		{C6B735FB-321C-49BC-8668-C3F3672D8ED5}.Release|x64.ActiveCfg = Release|x64
+		{C6B735FB-321C-49BC-8668-C3F3672D8ED5}.Release|x64.Build.0 = Release|x64
+		{C6B735FB-321C-49BC-8668-C3F3672D8ED5}.Release|x86.ActiveCfg = Release|Win32
+		{C6B735FB-321C-49BC-8668-C3F3672D8ED5}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

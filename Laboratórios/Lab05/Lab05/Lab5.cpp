@@ -16,12 +16,11 @@
 #include "Game.h"
 
 class Lab5 : public Game {
-
 private:
 	int posX1, posX2;
 	int posY1, posY2;
-	int velX;
-	int velY;
+	int velX1, velY1;
+	int velX2, velY2;
 	HDC hdc;
 public:
 	void Init();
@@ -29,28 +28,30 @@ public:
 	void Draw();
 	void Finalize();
 	void Collision();
-
 };
 
 void Lab5::Init() {
 	hdc = GetDC(window->Id()); // Recuperando contexto do dispositivo
 
-	posX1 = 10;
-	posY1 = 10;
+	posX1 = 5;
+	posY1 = 5;
 
-	posX2 = 100;
-	posY2 = 100;
+	posX2 = 50;
+	posY2 = 50;
 
-	velX = 5;
-	velY = 5;
+	velX1 = 2;
+	velY1 = 2;
+
+	velX2 = 5;
+	velY2 = 5;
 }
 
 void Lab5::Update() {
-	posX1 += velX;
-	posY1 += velY;
+	posX1 += velX1;
+	posY1 += velY1;
 
-	posX2 += velX;
-	posY2 += velY;
+	posX2 += velX2;
+	posY2 += velY2;
 
 	Collision();
 
@@ -69,21 +70,22 @@ void Lab5::Finalize() {
 
 void Lab5::Collision() {
 	if (posX1 > window->Width())
-		velX = -velX;
+		velX1 = -velX1;
 	if (posY1 > window->Height())
-		velY = -velY;
+		velY1 = -velY1;
 	if (posX1 < 0)
-		velX = -velX;
+		velX1 = -velX1;
 	if (posY1 < 0)
-		velY = -velY;
+		velY1 = -velY1;
+
 	if (posX2 > window->Width())
-		velX = -velX;
+		velX2 = -velX2;
 	if (posY2 > window->Height())
-		velY = -velY;
+		velY2 = -velY2;
 	if (posX2 < 0)
-		velX = -velX;
+		velX2 = -velX2;
 	if (posY2 < 0)
-		velY = -velY;
+		velY2 = -velY2;
 }
 
 // ------------------------------------------------------------------------------
