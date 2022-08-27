@@ -25,8 +25,15 @@ class Frogger : public Object
 {
 private:
     Sprite * sprite;
+    Sprite * spriteBack;
+    Sprite * spriteLeft;
+    Sprite * spriteRight;
+    Sprite * spriteCtrl;
+
     bool ctrlUp;
     bool ctrlDown;
+    bool ctrlLeft;
+    bool ctrlRight;
 
 public:
     Frogger();
@@ -35,12 +42,6 @@ public:
     void Update();
     void Draw();
 };
-
-// ---------------------------------------------------------------------------------
-// Funções Membro Inline
-
-inline void Frogger::Draw()
-{ sprite->Draw(x,y,z); }
 
 // ---------------------------------------------------------------------------------
 
