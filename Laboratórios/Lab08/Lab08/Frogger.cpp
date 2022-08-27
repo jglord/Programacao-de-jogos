@@ -59,7 +59,7 @@ void Frogger::Update()
     if (ctrlDown && window->KeyDown(VK_DOWN)) {
 
         Translate(0.0f, spriteBack->Height());
-        ctrlDown    = false;
+        ctrlDown = false;
     }
     else if (window->KeyUp(VK_DOWN)) {
         ctrlDown = true;
@@ -86,9 +86,6 @@ void Frogger::Update()
     else if (window->KeyUp(VK_RIGHT)) {
         ctrlRight = true;
     }
-    // ---------------------------------------------------------------------------------
-
-
     // ---------------------------------------------------------------------------------
 
     // mantém sapo dentro da tela
