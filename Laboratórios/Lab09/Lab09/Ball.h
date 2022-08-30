@@ -28,6 +28,7 @@ private:
 	Sprite * sprite;
 	int velX;
 	int velY;
+	bool ctrlSpace;
 public:
 
 	Ball(Image * img);

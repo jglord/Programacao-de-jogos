@@ -7,7 +7,7 @@
 //
 // Descrição:   Bola do jogo Breakout
 //
-**********************************************************************************/
+***********************************************************************************/
 
 #include "Ball.h"
 
@@ -17,6 +17,7 @@ Ball::Ball(Image * img) {
 	sprite = new Sprite(img);
 	velX = 0;
 	velY = 0;
+	ctrlSpace = false;
 }
 
 Ball::~Ball() {
@@ -26,7 +27,8 @@ Ball::~Ball() {
 void Ball::Update() {
 
 	// Joga a bola
-	if (window->KeyDown(VK_SPACE)) {
+	if (!ctrlSpace && window->KeyDown(VK_SPACE)) {
+		ctrlSpace = true;
 		velX = 300;
 		velY = 500;
 

@@ -46,7 +46,6 @@ void Frogger::Update()
 {
     // Mover sapo para cima
     if (ctrlUp && window->KeyDown(VK_UP)) {
-
         Translate(0.0f, -sprite->Height());
         ctrlUp = false;
     }
@@ -88,9 +87,9 @@ void Frogger::Update()
 
     // mantém sapo dentro da tela
     if (y < 65)
-        MoveTo(0, 65);
+        MoveTo(x, 65);
     if (y > 545)
-        MoveTo(0, 545);
+        MoveTo(x, 545);
 	if (x < 0) 
 		MoveTo(0, y);
 	if (x > 800 - sprite->Width())
