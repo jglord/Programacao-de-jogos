@@ -24,7 +24,8 @@ Ball::~Ball() {
 }
 
 void Ball::Update() {
-	// Atualiza posição da bola
+
+	// Joga a bola
 	if (window->KeyDown(VK_UP)) {
 		y -= velY * gameTime;
 		x += velX * gameTime;

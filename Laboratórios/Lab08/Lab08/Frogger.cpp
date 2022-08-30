@@ -67,9 +67,8 @@ void Frogger::Update()
     // ---------------------------------------------------------------------------------
 
     // Mover sapo para esquerda
-    if (ctrlDown && window->KeyDown(VK_LEFT)) {
-
-        Translate(-spriteLeft->Width(), 0.0f);
+    if (ctrlLeft && window->KeyDown(VK_LEFT)) {
+        Translate(-40.0f, 0.0f);
         ctrlLeft = false;
     }
     else if (window->KeyUp(VK_LEFT)) {
@@ -78,10 +77,9 @@ void Frogger::Update()
     // ---------------------------------------------------------------------------------
 
     // Mover sapo para direita
-    if (ctrlDown && window->KeyDown(VK_RIGHT)) {
+    if (ctrlRight && window->KeyDown(VK_RIGHT)) {
         Translate(spriteLeft->Width(), 0.0f);
         ctrlRight   = false;
-
     }
     else if (window->KeyUp(VK_RIGHT)) {
         ctrlRight = true;
@@ -97,6 +95,8 @@ void Frogger::Update()
 		MoveTo(0, y);
 	if (x > 800 - sprite->Width())
 		MoveTo(800 - sprite->Width(), y);
+    // ---------------------------------------------------------------------------------
+
 }
 
 void Frogger::Draw()
