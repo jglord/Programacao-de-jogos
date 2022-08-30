@@ -15,8 +15,8 @@
 
 Ball::Ball(Image * img) {
 	sprite = new Sprite(img);
-	velX = 300;
-	velY = 500;
+	velX = 0;
+	velY = 0;
 }
 
 Ball::~Ball() {
@@ -26,10 +26,13 @@ Ball::~Ball() {
 void Ball::Update() {
 
 	// Joga a bola
-	if (window->KeyDown(VK_UP)) {
+	if (window->KeyDown(VK_SPACE)) {
+		velX = 300;
+		velY = 500;
+
+	}
 		y -= velY * gameTime;
 		x += velX * gameTime;
-	}
 
 	// ---------------------------------------------------------------------------------
 	// Mantem bola dentro da tela
