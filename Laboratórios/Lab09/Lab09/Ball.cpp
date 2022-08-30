@@ -38,11 +38,11 @@ void Ball::Update() {
 	// Mantem bola dentro da tela
 	if (y < 0)
 		velY = -velY;
-	if (y > window->Height())
+	if (y > 540 - sprite->Height())
 		velY = -velY;
 	if (x < 0)
 		velX = -velX;
-	if (x > window->Width())
+	if (x > 960 - sprite->Width())
 		velX = -velX;
 }
 // ---------------------------------------------------------------------------------
