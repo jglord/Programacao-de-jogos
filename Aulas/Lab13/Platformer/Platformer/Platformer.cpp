@@ -21,12 +21,15 @@ Scene * Platformer::scene = nullptr;
 
 void Platformer::Init()
 {
+	Player * player = new Player();
+
     // cria cena do jogo
     scene = new Scene();
 
     // pano de fundo do jogo
     backg = new Background();
     scene->Add(backg, STATIC);
+	scene->Add(player, MOVING);
 }
 
 // ------------------------------------------------------------------------------
