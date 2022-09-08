@@ -24,8 +24,6 @@ Player::Player()
 	anim->Add(INVERTED, seqInvert, 4);
 	anim->Add(NORMAL, seqNormal, 4);
 
-
-
 	MoveTo(window->CenterX(), 24.0f, 0.0f);
 }
 
@@ -48,7 +46,20 @@ void Player::OnCollision(Object * obj)
 
 void Player::Update()
 {
-    
+	// atualiza animação
+	anim->Select(NORMAL);
+	anim->NextFrame();
+
+	if (keyCtrl && window->KeyDown(VK_SPACE)) {
+		if (gravity == NORMAL)
+			Translate(0, 100 * gameTime);
+		if (gravity == INVERTED)
+			Translate(0, -100 * gameTime);
+		keyCtrl = false;
+	}
+	else if (window->KeyUp(VK_SPACE))
+		keyCtrl = true;
+		
 }
 
 // ---------------------------------------------------------------------------------
