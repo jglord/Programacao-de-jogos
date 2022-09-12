@@ -140,6 +140,9 @@
     <ClInclude Include="Camp.h">
       <Filter>Game\Arquivos de Cabeçalho</Filter>
     </ClInclude>
+    <ClInclude Include="Team.h">
+      <Filter>Game\Arquivos de Cabeçalho</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Text Include="FoodL1.txt">
