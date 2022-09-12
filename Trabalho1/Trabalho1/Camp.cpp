@@ -17,7 +17,7 @@
 Camp::Camp() {
 	//Rect rect = new Rect();
 	sprite = new Sprite("Resources/Camp.jpg");
-	BBox(new Rect(0, 0, 50, 50));
+	BBox(new Rect(*new Point(58, 25), *new Point(1092, 728)));
 }
 
 Camp::~Camp() {

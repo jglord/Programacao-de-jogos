@@ -9,8 +9,8 @@
 //
 **********************************************************************************/
 
-#ifndef _PACMAN_HOME_H_
-#define _PACMAN_HOME_H_
+#ifndef _HOME_H_
+#define _HOME_H_
 
 // ------------------------------------------------------------------------------
 // Inclusões
@@ -18,6 +18,8 @@
 #include "Game.h"
 #include "Camp.h"
 #include "Sprite.h"
+#include "Scene.h"
+
 
 // ------------------------------------------------------------------------------
 
@@ -26,8 +28,13 @@ class Home : public Game
 private:
     Sprite * backg = nullptr;       // pano de fundo
     bool ctrlKeyESC = false;        // controle do ESC
-    Camp * camp = nullptr;
 
+    Scene * scene = nullptr;       // gerenciador de cena
+
+    Camp * camp = nullptr;
+    
+    bool viewBBox = false;          // habilita visualização da bounding box
+    bool ctrlKeyB = false;          // controle da tecla B
 public:
     void Init();                    // inicialização
     void Update();                  // atualização

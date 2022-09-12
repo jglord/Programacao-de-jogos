@@ -17,8 +17,13 @@
 
 void Home::Init()
 {
+    // Criando gerenciador de cena
+    scene = new Scene();
+    // Instaciando campo e utilizando como plano de fundo incialmente
     camp = new Camp();
     backg = camp->sprite;
+    
+    scene->Add(camp, STATIC);
 }
 
 // ------------------------------------------------------------------------------
@@ -32,6 +37,16 @@ void Home::Finalize()
 
 void Home::Update()
 {
+    // habilita/desabilita bounding box
+    if (ctrlKeyB && window->KeyDown('B'))
+    {
+        viewBBox = !viewBBox;
+        ctrlKeyB = false;
+    }
+    else if (window->KeyUp('B'))
+    {
+        ctrlKeyB = true;
+    }
 }
 
 // ------------------------------------------------------------------------------
@@ -39,6 +54,11 @@ void Home::Update()
 void Home::Draw()
 {
     backg->Draw(float(window->CenterX()), float(window->CenterY()), Layer::BACK);
+    scene->Draw();
+
+    // desenha bounding box dos objetos
+    if (viewBBox)
+        scene->DrawBBox();
 }
 
 // ------------------------------------------------------------------------------
