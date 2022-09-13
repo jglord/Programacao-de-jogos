@@ -8,9 +8,8 @@
 // Descrição:   Botao do futbutton
 //
 **********************************************************************************/
-
-#ifndef _BUTTON_H_
-#define _BUTTON_H_
+#ifndef _BUTTON_H
+#define _BUTTON_H
 
 // ---------------------------------------------------------------------------------
 // Inclusões
@@ -23,9 +22,7 @@
 
 class Button : public Object {
 private:
-
-
-
+	Sprite * sprite = nullptr;
 
 public:
 
@@ -38,6 +35,6 @@ public:
 	void Update();
 };
 
+inline void Button::Draw() { sprite->Draw(x, y, z); }
 
-
-#endif
+#endif // !_BUTTON_H

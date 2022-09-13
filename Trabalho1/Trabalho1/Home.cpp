@@ -21,16 +21,27 @@ void Home::Init()
     scene = new Scene();
     // Instaciando campo e utilizando como plano de fundo incialmente
     camp = new Camp();
+
     backg = camp->sprite;
     
     scene->Add(camp, STATIC);
+ 
+    //criando botao
+    button = new Button();
+    scene->Add(button, MOVING);
+    
+    // Criando bola
+    ball = new Ball();
+    scene->Add(ball, MOVING);
 }
 
 // ------------------------------------------------------------------------------
 
 void Home::Finalize()
 {
-    delete backg;
+   
+    delete camp;
+    delete button;
 }
 
 // ------------------------------------------------------------------------------
@@ -47,6 +58,7 @@ void Home::Update()
     {
         ctrlKeyB = true;
     }
+    scene->Update();
 }
 
 // ------------------------------------------------------------------------------

@@ -14,15 +14,25 @@
 #include "Player.h"
 
 
-Button::Button(){}
+Button::Button(){
+	sprite = new Sprite("Resources/buttonBrasil.png");
+	BBox(new Circle(21.5f));
+	MoveTo(window->CenterX(), window->CenterY());
+}
 
-Button::~Button() {}
+Button::~Button() {
+	delete sprite;
+}
 
 void Button::OnCollision(Object* obj) {
 
 }
 
 
-void Button::Draw(){}
+void Button::Update(){
 
-void Button::Update(){}
+	//Mantem bola dentro da tela
+	// 
+	//Sinaliza que a bola saiu do campo
+
+}

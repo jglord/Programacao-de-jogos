@@ -163,6 +163,7 @@
     </Manifest>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Ball.cpp" />
     <ClCompile Include="Button.cpp" />
     <ClCompile Include="Camp.cpp" />
     <ClCompile Include="Engine.cpp" />
@@ -182,6 +183,7 @@
     <ClCompile Include="Window.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Ball.h" />
     <ClInclude Include="Button.h" />
     <ClInclude Include="Camp.h" />
     <ClInclude Include="Engine.h" />

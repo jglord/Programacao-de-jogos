@@ -19,22 +19,37 @@
 #include "Camp.h"
 #include "Sprite.h"
 #include "Scene.h"
-
+#include "Button.h"
+#include "Ball.h"
 
 // ------------------------------------------------------------------------------
+enum BALL_STATE {
+    SIDE,
+    GOALKICK,
+    KICKOFF,
+    CORNER
+};
+
 
 class Home : public Game
 {
 private:
-    Sprite * backg = nullptr;       // pano de fundo
-    bool ctrlKeyESC = false;        // controle do ESC
+    Sprite * backg  = nullptr;       // pano de fundo
+    Button * button   = nullptr;
+    
+    bool ctrlKeyESC = false;         // controle do ESC
+    bool ctrlSpace = false;          // controle do space
+    bool ctrlKeyB = false;           // controle da tecla B
 
-    Scene * scene = nullptr;       // gerenciador de cena
+    Scene * scene   = nullptr;       // gerenciador de cena
 
     Camp * camp = nullptr;
-    
+    Ball * ball  = nullptr;
+
+    bool ballCtrl;                  // flag para saber se bola esta em jogo ou nao
+
+
     bool viewBBox = false;          // habilita visualização da bounding box
-    bool ctrlKeyB = false;          // controle da tecla B
 public:
     void Init();                    // inicialização
     void Update();                  // atualização

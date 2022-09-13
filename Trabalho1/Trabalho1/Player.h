@@ -18,6 +18,8 @@
 #include "Types.h"                      // tipos específicos da engine
 #include "Object.h"                     // interface de Object
 #include "Sprite.h"                     // interface de Sprites
+#include "Team.h"                       // interface de Sprites
+
 
 // ---------------------------------------------------------------------------------
 // Constantes Globais
@@ -35,6 +37,7 @@ private:
 public:
 
     Player();                           // construtor
+    Player(Team * team);                // construir time
     ~Player();                          // destrutor
 
     void OnCollision(Object * obj);     // resolução da colisão
