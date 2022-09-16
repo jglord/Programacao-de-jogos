@@ -8,8 +8,8 @@
 // Descrição:   Botao do futbutton para o goleiro
 //
 **********************************************************************************/
-#ifndef _BUTTON_H
-#define _BUTTON_H
+#ifndef _BUTTONGK_H
+#define _BUTTONGK_H
 
 // ---------------------------------------------------------------------------------
 // Inclusões
