@@ -1,30 +1,29 @@
 /**********************************************************************************
-// Bola (Código Fonte)
+// Time (Código Fonte)
 //
-// Criação:     12 Set 2022
-// Atualização: 12 Set 2022
+// Criação:     13 Set 2022
+// Atualização: 13 Set 2022
 // Compilador:  Visual C++ 2022
 //
-// Descrição:   Bola do jogo Futbutton
+// Descrição:   Time de futebol de botão
 //
 **********************************************************************************/
 
 #include "FutButton.h"
-#include "Ball.h"
 #include "Player.h"
+#include "Team.h"
+#include "Button.h"
+#include "Ball.h"
 
 
-Ball::Ball() {
-    velX = 50.0f;
-    velY = 50.0f;
+Team::Team()
+{
+    Button buttons[11];
 
-	sprite = new Sprite("Resources/Ball.png");
-	BBox(new Circle(5.0f));
-	MoveTo(window->CenterX() + 40, window->CenterY() - 40);
 }
 
 Ball::~Ball() {
-	delete sprite;
+    delete sprite;
 }
 
 void Ball::OnCollision(Object* obj) {
@@ -33,11 +32,11 @@ void Ball::OnCollision(Object* obj) {
 
 
 void Ball::Update() {
-    
+
 
     Translate(velX * gameTime, velY * gameTime);
 
-	//Mantem bola dentro da tela
+    //Mantem bola dentro da tela
     // mantém a bola dentro da tela (tam. da bola: 12x12)
     if (x < 0)
     {
@@ -62,7 +61,7 @@ void Ball::Update() {
 
 
 
-	//Sinaliza que a bola saiu do campo
+    //Sinaliza que a bola saiu do campo
     if
 
 

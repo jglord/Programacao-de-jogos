@@ -28,11 +28,15 @@
 class Team : public Object
 {
 private:
-
+    Sprite* sprite = nullptr;
 
 public:
+    string name;
+    Button buttons[11];
 
-    Team(Button Buttons[11]);         // Construtor com 11 butões do time
+
+
+    Team(Button * Buttons[11]);         // Construtor com 11 butões do time
     Team();                           // construtor
     ~Team();                          // destrutor
 

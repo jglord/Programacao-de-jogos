@@ -18,6 +18,7 @@
 #include "Object.h"                     // interface de Object
 #include "Sprite.h"                     // interface de Sprites
 #include "Player.h"
+#include "Team.h"
 
 // ---------------------------------------------------------------------------------
 
@@ -29,8 +30,10 @@ public:
 	float velX;                         // velocidade horizontal
 	float velY;                         // velocidade vertical
 
+	Team sideCtrl;						// atributo para saber qual time está com a bola
+
 	Ball();
-	Ball(Player * p); // Construtor para 
+	Ball(Team * t);						//construtor para criar uma bola com um jogador definido
 	~Ball();
 
 	void OnCollision(Object* obj);

@@ -25,7 +25,9 @@ void Home::Init()
     backg = camp->sprite;
     
     scene->Add(camp, STATIC);
- 
+    //criando time
+    
+
     //criando botao
     button = new Button();
     scene->Add(button, MOVING);
