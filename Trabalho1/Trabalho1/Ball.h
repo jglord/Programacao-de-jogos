@@ -24,7 +24,8 @@
 // Constantes Globais
 
 // Estados possiveis da bola
-enum BALLSATE{MOVING, STOPED, OFFBOARD, ONBOARD};
+enum BALL_STATE {SIDE,GOALKICK,KICKOFF,CORNER, MOVING};
+
 
 
 // ---------------------------------------------------------------------------------

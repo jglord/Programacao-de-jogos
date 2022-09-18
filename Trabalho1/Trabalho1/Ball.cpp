@@ -77,7 +77,5 @@ void Ball::Update() {
 
 
 	//Sinaliza que a bola saiu do campo
-    if
-
 
 }
