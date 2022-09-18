@@ -12,19 +12,33 @@
 #include "FutButton.h"
 #include "Ball.h"
 #include "Player.h"
+#include "Team.h"
 
-
+//--------------------------------------------------------------------------------------------------------------------
+// CONSTRUTOR PADRÃO
 Ball::Ball() {
-    velX = 50.0f;
-    velY = 50.0f;
+    velX = 0;
+    velY = 0;
 
 	sprite = new Sprite("Resources/Ball.png");
 	BBox(new Circle(5.0f));
 	MoveTo(window->CenterX() + 40, window->CenterY() - 40);
 }
 
+// CONSTRUTOR COM TEAM E STATE
+Ball::Ball(Team *t, uint state) {
+    velX = 0;  
+    velY = 0;
+
+    sprite = new Sprite("Resources/Ball.png");                      // Carrega a sprite da bola
+    BBox(new Circle(5.0f));                                      // Define a bound box da bola
+    MoveTo(window->CenterX() + 40, window->CenterY() - 40);   // Posiciona a bola
+    ballState = state;                                             // Define o estado da bola
+    sideCtrl = t;                                                  // define o time que está com a bola
+}
+
 Ball::~Ball() {
-	delete sprite;
+    delete sprite;
 }
 
 void Ball::OnCollision(Object* obj) {
@@ -63,7 +77,5 @@ void Ball::Update() {
 
 
 	//Sinaliza que a bola saiu do campo
-
-
 
 }
