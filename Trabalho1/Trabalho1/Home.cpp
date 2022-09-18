@@ -1,11 +1,11 @@
 /**********************************************************************************
-// Home (Código Fonte) 
+// Home (Cï¿½digo Fonte) 
 // 
-// Criação:     18 Jan 2013
-// Atualização: 25 Ago 2021
+// Criaï¿½ï¿½o:     18 Jan 2013
+// Atualizaï¿½ï¿½o: 25 Ago 2021
 // Compilador:  Visual C++ 2019
 //
-// Descrição:   Tela de abertura do jogo PacMan
+// Descriï¿½ï¿½o:   Tela de abertura do jogo PacMan
 //
 **********************************************************************************/
 
@@ -19,46 +19,29 @@ using namespace std;
 
 void Home::Init()
 {
-    // Criando gerenciador de cena
-    scene = new Scene();
-    // Instaciando campo e utilizando como plano de fundo incialmente
-    camp = new Camp();
-
-    backg = camp->sprite;
-    
-    scene->Add(camp, STATIC);
- 
-    //criando botao
-    button = new Button();
-    scene->Add(button, MOVING);
-    
-    // Criando bola
-    ball = new Ball();
-    scene->Add(ball, MOVING);
+	backg = new Sprite("Resources/TitleScreen.jpg");
 }
 
 // ------------------------------------------------------------------------------
 
 void Home::Finalize()
 {
-   
-    delete camp;
-    delete button;
+    delete backg;
 }
 
 // ------------------------------------------------------------------------------
 
 void Home::Update()
 {
-    // habilita/desabilita bounding box
-    if (ctrlKeyB && window->KeyDown('B'))
+    // sai do jogo com a tecla ESC
+    if (ctrlKeyESC && window->KeyDown(VK_ESCAPE))
     {
-        viewBBox = !viewBBox;
-        ctrlKeyB = false;
+        ctrlKeyESC = false;
+        window->Close();
     }
-    else if (window->KeyUp('B'))
+    else if (window->KeyUp(VK_ESCAPE))
     {
-        ctrlKeyB = true;
+        ctrlKeyESC = true;
     }
 
     if (window->KeyDown(VK_LBUTTON)) {
@@ -86,12 +69,7 @@ void Home::Update()
 
 void Home::Draw()
 {
-    backg->Draw(float(window->CenterX()), float(window->CenterY()), Layer::BACK);
-    scene->Draw();
 
-    // desenha bounding box dos objetos
-    if (viewBBox)
-        scene->DrawBBox();
 }
 
 // ------------------------------------------------------------------------------
