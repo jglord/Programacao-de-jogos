@@ -38,8 +38,9 @@ private:
     Button * button   = nullptr;
     
     bool ctrlKeyESC = false;         // controle do ESC
-    bool ctrlSpace = false;          // controle do space
-    bool ctrlKeyB = false;           // controle da tecla B
+    bool ctrlSpace  = false;          // controle do space
+    bool ctrlKeyB   = false;           // controle da tecla B
+    bool ctrlLMouse = false;
 
     Scene * scene   = nullptr;       // gerenciador de cena
 
