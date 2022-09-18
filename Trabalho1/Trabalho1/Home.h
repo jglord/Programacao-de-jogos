@@ -31,9 +31,14 @@ private:
     Sprite * backg  = nullptr;       // pano de fundo
     
     bool ctrlKeyESC = false;         // controle do ESC
+
+    bool ctrlSpace  = false;          // controle do space
+    bool ctrlKeyB   = false;           // controle da tecla B
+
     bool ctrlSpace = false;          // controle do space
     bool ctrlUp = false;             // controle da tecla up
     bool ctrlKeyDown = false;        // controle da tecla Down
+
 
     bool ctrlLMouse = false;
 

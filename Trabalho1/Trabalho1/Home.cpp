@@ -45,7 +45,8 @@ void Home::Update()
     }
 
     if (window->KeyDown(VK_LBUTTON)) {
-        if (window->MouseX() > button->X() /*&& window->MouseY() < button->Y()*/) {
+        if ((window->MouseX() > button->X() || window->MouseX() < button->X()) && (window->MouseY() > button->Y() || window->MouseY() < button->Y())) {
+
             stringstream ss;
             ss << "clicando dentro do eixo x\n\n";
             OutputDebugStringA(ss.str().c_str());
@@ -63,6 +64,9 @@ void Home::Update()
     }
 
     scene->Update();
+
+    // detec��o e resolu��o de colis�o
+    scene->CollisionDetection();
 }
 
 // ------------------------------------------------------------------------------
