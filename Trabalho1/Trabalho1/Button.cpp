@@ -31,8 +31,12 @@ void Button::OnCollision(Object* obj) {
 
 void Button::Update(){
 
-	//Mantem bola dentro da tela
-	// 
-	//Sinaliza que a bola saiu do campo
+	//if (window->KeyDown(VK_LBUTTON)) {
+		
+		
+			/*if (window->MouseY() > y && window->MouseY() < sprite->Height())
+			sprite->Draw(window->MouseX(), window->MouseY());*/
+
+	//}
 
 }

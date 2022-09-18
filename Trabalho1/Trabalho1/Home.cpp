@@ -12,6 +12,8 @@
 #include "Engine.h"
 #include "Home.h"
 #include "Level1.h"
+#include <sstream>
+using namespace std;
 
 // ------------------------------------------------------------------------------
 
@@ -58,6 +60,25 @@ void Home::Update()
     {
         ctrlKeyB = true;
     }
+
+    if (window->KeyDown(VK_LBUTTON)) {
+        if (window->MouseX() > button->X() /*&& window->MouseY() < button->Y()*/) {
+            stringstream ss;
+            ss << "clicando dentro do eixo x\n\n";
+            OutputDebugStringA(ss.str().c_str());
+            ctrlLMouse = true;
+
+            button->MoveTo(window->MouseX(), window->MouseY());
+
+        }
+    }
+    else if (ctrlLMouse && window->KeyUp(VK_LBUTTON)) {
+        stringstream ss;
+        ss << "Soltou\n\n";
+        OutputDebugStringA(ss.str().c_str());
+        ctrlLMouse = false;
+    }
+
     scene->Update();
 }
 

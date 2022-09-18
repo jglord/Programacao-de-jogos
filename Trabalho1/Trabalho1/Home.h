@@ -41,6 +41,8 @@ private:
     bool ctrlSpace = false;          // controle do space
     bool ctrlKeyB = false;           // controle da tecla B
 
+    bool ctrlLMouse = false;
+
     Scene * scene   = nullptr;       // gerenciador de cena
 
     Camp * camp = nullptr;

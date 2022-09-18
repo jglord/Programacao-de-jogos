@@ -15,8 +15,8 @@
 
 
 Ball::Ball() {
-    velX = 50.0f;
-    velY = 50.0f;
+    velX = 0;
+    velY = 0;
 
 	sprite = new Sprite("Resources/Ball.png");
 	BBox(new Circle(5.0f));
