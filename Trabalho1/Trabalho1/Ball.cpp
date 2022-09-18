@@ -15,12 +15,12 @@
 
 
 Ball::Ball() {
-    velX = 50.0f;
-    velY = 50.0f;
+    velX = 0.0f;
+    velY = 0.0f;
 
 	sprite = new Sprite("Resources/Ball.png");
 	BBox(new Circle(5.0f));
-	MoveTo(window->CenterX() + 40, window->CenterY() - 40);
+	MoveTo(window->CenterX() + 80, window->CenterY() - 80);
 }
 
 Ball::~Ball() {
@@ -28,7 +28,6 @@ Ball::~Ball() {
 }
 
 void Ball::OnCollision(Object* obj) {
-
 }
 
 

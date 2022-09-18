@@ -25,7 +25,7 @@ Button::~Button() {
 }
 
 void Button::OnCollision(Object* obj) {
-
+	obj->Translate(5, 0);
 }
 
 

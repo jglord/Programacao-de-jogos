@@ -80,6 +80,9 @@ void Home::Update()
     }
 
     scene->Update();
+
+    // detecção e resolução de colisão
+    scene->CollisionDetection();
 }
 
 // ------------------------------------------------------------------------------
