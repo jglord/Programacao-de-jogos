@@ -18,6 +18,8 @@
 #include "Object.h"                     // interface de Object
 #include "Sprite.h"                     // interface de Sprites
 #include "Button.h"
+#include "ButtonGK.h"
+#include "Player.h"
 // ---------------------------------------------------------------------------------
 // Constantes Globais
 
@@ -28,19 +30,24 @@
 class Team : public Object
 {
 private:
-
+    Sprite* sprite = nullptr;
 
 public:
+    string name;
+    Button buttons[10];
+    ButtonGK buttonGK;
+    Player  p;
 
-    Team(Button Buttons[11]);         // Construtor com 11 butões do time
-    Team();                           // construtor
-    ~Team();                          // destrutor
 
 
-    void OnCollision(Object* obj);     // resolução da colisão
+    Team(Player player, string name);         // Construtor com 11 butões do time
+    ~Team();                                    // destrutor
 
-    void Update();                      // atualização do objeto
-    void Draw();                        // desenho do objeto
+
+    void OnCollision(Object* obj);              // resolução da colisão
+
+    void Update();                              // atualização do objeto
+    void Draw();                                // desenho do objeto
 };
 
 // ---------------------------------------------------------------------------------

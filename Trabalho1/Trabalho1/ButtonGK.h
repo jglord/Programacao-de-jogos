@@ -1,16 +1,15 @@
 /**********************************************************************************
-// Campo (Arquivo de Cabeçalho)
+// ButtonGK (Arquivo de Cabeçalho)
 //
-// Criação:     11 Set 2022
-// Atualização: 11 Set 2022
+// Criação:     15 Set 2022
+// Atualização: 15 Set 2022
 // Compilador:  Visual C++ 2022
 //
-// Descrição:   Campo do futbutton
+// Descrição:   Botao do futbutton para o goleiro
 //
 **********************************************************************************/
-
-#ifndef _BUTTON_H_
-#define _BUTTON_H_
+#ifndef _BUTTONGK_H
+#define _BUTTONGK_H
 
 // ---------------------------------------------------------------------------------
 // Inclusões
@@ -21,15 +20,13 @@
 
 // ---------------------------------------------------------------------------------
 
-class Camp : public Object {
+class ButtonGK : public Object {
 private:
-
-
+	Sprite* sprite = nullptr;
 public:
-	Sprite * sprite = nullptr;
 
-	Camp();
-	~Camp();
+	ButtonGK();
+	~ButtonGK();
 
 	void OnCollision(Object* obj);
 
@@ -37,6 +34,6 @@ public:
 	void Update();
 };
 
+inline void ButtonGK::Draw() { sprite->Draw(x, y, z); }
 
-
-#endif
+#endif // !_BUTTON_H

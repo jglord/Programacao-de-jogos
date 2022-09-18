@@ -18,19 +18,40 @@
 #include "Object.h"                     // interface de Object
 #include "Sprite.h"                     // interface de Sprites
 #include "Player.h"
+#include "Team.h"
+
+// ---------------------------------------------------------------------------------
+// Constantes Globais
+
+// Estados possiveis da bola
+enum BALL_STATE {SIDE,GOALKICK,KICKOFF,CORNER, MOVING};
+
+
 
 // ---------------------------------------------------------------------------------
 
 class Ball : public Object {
 private:
+
 	Sprite* sprite = nullptr;
 
 public:
+
 	float velX;                         // velocidade horizontal
 	float velY;                         // velocidade vertical
+	Team * sideCtrl;					// atributo para saber qual time está com a bola
+	uint ballState;						// atributo para controlar o estado em que a bola está
 
 	Ball();
-	Ball(Player * p); // Construtor para 
+	//---------------------------------------------------------------------------------------------------------------------------------------------
+	//ESSE CONSTRUTOR É REALMENTE NECESSÁRIO?
+	//---------------------------------------------------------------------------------------------------------------------------------------------
+	//SE A BOLA PERTENCE A ALGUM JOGADOR, OBRIGATORIAMENTE ELA TEM QUE ESTÁ EM UM ESTADO, PARA O QUE SERVERIA UM CONSTRUTOR SOMENTE COM TIME?
+	
+	/*Ball(Team* t);						//construtor para criar uma bola com um jogador definido*/
+	
+	//---------------------------------------------------------------------------------------------------------------------------------------------
+	Ball(Team * t, uint state);			// construtor para criar uma bola com um jogador definido e o estado em que a bola está
 	~Ball();
 
 	void OnCollision(Object* obj);

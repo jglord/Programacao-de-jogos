@@ -22,10 +22,10 @@
 
 class Button : public Object {
 private:
-	Sprite * sprite = nullptr;
 
 public:
 
+	Sprite * sprite = nullptr;
 	Button();
 	~Button();
 
