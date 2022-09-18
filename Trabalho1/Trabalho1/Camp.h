@@ -24,7 +24,6 @@
 class Camp : public Object {
 private:
 
-	
 
 public:
 	Sprite * sprite = nullptr;
