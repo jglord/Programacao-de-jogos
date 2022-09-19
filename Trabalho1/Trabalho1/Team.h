@@ -30,7 +30,7 @@ enum PLAYER_STATE {ATTACKING, DEFEDING};
 class Team : public Object
 {
 private:
-    Button * teamButtons[10];
+    Button * teamButtons[11];
 
 public:
 

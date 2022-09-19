@@ -75,7 +75,9 @@ void Home::Update()
     {
         ctrlKeyB = true;
     }
-
+    /*
+    Refazer logica de arrastar o botao pra o time todo
+    
     if (window->KeyDown(VK_LBUTTON)) {
         if ((window->MouseX() > button->X() || window->MouseX() < button->X()) && (window->MouseY() > button->Y() || window->MouseY() < button->Y())) {
             stringstream ss;
@@ -94,7 +96,7 @@ void Home::Update()
         ss << "Soltou\n\n";
         OutputDebugStringA(ss.str().c_str());
         ctrlLMouse = false;
-    }
+    }*/
 
     scene->Update();
 
@@ -129,6 +131,7 @@ void Home::markButtonPositions() {
     buttonPositions1[6]  = new Point(350, 300);     // meio campo
     buttonPositions1[7]  = new Point(350, 400);     // meio campo
     buttonPositions1[8]  = new Point(350, 500);     // meio campo
+
     buttonPositions1[9]  = new Point(450, 300);     // atacante
     buttonPositions1[10] = new Point(450, 400);     // atacante
     // ------------------------------------------------------------------------------
@@ -137,18 +140,18 @@ void Home::markButtonPositions() {
                    
     buttonPositions2[0] = new Point(1050, 375);     // goleiro
                    
-    buttonPositions2[1] = new Point();     // lateral esquerdo
-    buttonPositions2[2] = new Point();     // zagueiro esquerdo
-    buttonPositions2[3] = new Point();     // zagueiro direito
-    buttonPositions2[4] = new Point();     // lateral direito
+    buttonPositions2[1] = new Point(900, 550);     // lateral esquerdo
+    buttonPositions2[2] = new Point(950, 450);     // zagueiro esquerdo
+    buttonPositions2[3] = new Point(950, 300);     // zagueiro direito
+    buttonPositions2[4] = new Point(900, 150);     // lateral direito
                    
-    buttonPositions2[5] = new Point();     // meio campo
-    buttonPositions2[6] = new Point();     // meio campo
-    buttonPositions2[7] = new Point();     // meio campo
-    buttonPositions2[8] = new Point();     // meio campo
+    buttonPositions2[5] = new Point(750, 200);     // meio campo
+    buttonPositions2[6] = new Point(750, 300);     // meio campo
+    buttonPositions2[7] = new Point(750, 400);     // meio campo
+    buttonPositions2[8] = new Point(750, 500);     // meio campo
 
-    buttonPositions2[9] = new Point();     // atacante
-    buttonPositions2[10] = new Point();     // atacante
+    buttonPositions2[9]  = new Point(650, 300);     // atacante
+    buttonPositions2[10] = new Point(650, 400);     // atacante
     // ------------------------------------------------------------------------------
 
 

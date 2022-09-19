@@ -20,7 +20,7 @@ Ball::Ball() {
 
 	sprite = new Sprite("Resources/Ball.png");
 	BBox(new Circle(5.0f));
-	MoveTo(window->CenterX() + 80, window->CenterY() - 80);
+	MoveTo(window->CenterX(), window->CenterY());
 }
 
 Ball::~Ball() {
