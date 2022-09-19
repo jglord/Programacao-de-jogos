@@ -14,8 +14,14 @@
 #include "Player.h"
 
 
-Button::Button(){
+Button::Button() {
 	sprite = new Sprite("Resources/buttonBrasil.png");
+	BBox(new Circle(21.5f));
+	MoveTo(window->CenterX(), window->CenterY());
+}
+
+Button::Button(string name) {
+	sprite = new Sprite(name);
 	BBox(new Circle(21.5f));
 	MoveTo(window->CenterX(), window->CenterY());
 }
@@ -29,16 +35,14 @@ void Button::OnCollision(Object* obj) {
 }
 
 
-void Button::Update(){
-	if (window->KeyDown(VK_LBUTTON)) {
+void Button::Update() {
 
-	}
 	//if (window->KeyDown(VK_LBUTTON)) {
-		
-		
+
+
 			/*if (window->MouseY() > y && window->MouseY() < sprite->Height())
 			sprite->Draw(window->MouseX(), window->MouseY());*/
 
-	//}
+			//}
 
 }

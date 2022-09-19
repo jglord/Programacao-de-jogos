@@ -1,37 +1,47 @@
-/**********************************************************************************
-// Time (Código Fonte)
+ï»¿/**********************************************************************************
+// Bola (Cï¿½digo Fonte)
 //
-// Criação:     13 Set 2022
-// Atualização: 13 Set 2022
+// Criaï¿½ï¿½o:     12 Set 2022
+// Atualizaï¿½ï¿½o: 12 Set 2022
 // Compilador:  Visual C++ 2022
 //
-// Descrição:   Time de futebol de botão
+// Descriï¿½ï¿½o:   Bola do jogo Futbutton
 //
 **********************************************************************************/
 
 #include "FutButton.h"
-#include "Player.h"
 #include "Team.h"
-#include "Button.h"
-#include "Ball.h"
 
-
-Team::Team()
-{
-
+Team::Team(string buttonFileName) {
+    for (int i = 0; i < 10; i++) {
+        teamButtons[i] = new Button(buttonFileName);
+    }
 }
 
 
-
-Ball::~Ball() {
-    delete sprite;
+void Team::organizeTeamInCamp(Point* buttonsPositions[11]) {
+    float j = 0;
+    for (int i = 0; i < 10; i++) {
+        teamButtons[i]->MoveTo(buttonsPositions[i]->X(), buttonsPositions[i]->Y());
+        j += 10;
+    }
 }
 
-void Ball::OnCollision(Object* obj) {
+
+Team::~Team() {
 
 }
 
+void Team::OnCollision(Object* obj) {
+}
 
-void Ball::Update() {
 
+void Team::Update() {
+}
+
+
+void Team::Draw() {
+    for (int i = 0; i < 10; i++) {
+        teamButtons[i]->Draw();
+    }
 }

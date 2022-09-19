@@ -30,25 +30,31 @@ class Teste : public Game
 {
 private:
     
-    Sprite * backg  = nullptr;       // pano de fundo
+    Sprite * backg   = nullptr;       // pano de fundo
     
-    bool ctrlKeyESC = false;         // controle do ESC
-    bool ctrlSpace  = false;          // controle do space
-    bool ctrlKeyB   = false;           // controle da tecla B
-    bool ctrlUp = false;             // controle da tecla up
+    bool ctrlKeyESC  = false;         // controle do ESC
+    bool ctrlSpace   = false;          // controle do space
+    bool ctrlKeyB    = false;           // controle da tecla B
+    bool ctrlUp      = false;             // controle da tecla up
     bool ctrlKeyDown = false;        // controle da tecla Down
-    bool ctrlKeyS = false;           //controle tecla S   
-    bool ctrlLMouse = false;
+    bool ctrlKeyS    = false;           //controle tecla S   
+    bool ctrlLMouse  = false;
 
-    bool viewScene = false;              // visualiza sprites da cena
+    bool viewScene   = false;              // visualiza sprites da cena
 
 
-    Scene * scene   = nullptr;       // gerenciador de cena
+    Scene * scene    = nullptr;       // gerenciador de cena
 
-    Path* path = nullptr;
-    Button* button = nullptr;
-    Camp * camp = nullptr;
-    Ball * ball  = nullptr;
+    Path* path       = nullptr;
+    Button* button   = nullptr;
+    Camp * camp      = nullptr;
+    Ball * ball      = nullptr;
+
+    Point* buttonPositions1[11];
+    Point* buttonPositions2[11];
+
+    Team* team1 = nullptr;
+    Team* team2 = nullptr;
 
     bool ballCtrl;                  // flag para saber se bola esta em jogo ou nao
 
@@ -59,6 +65,8 @@ public:
     void Update();                  // atualiza��o
     void Draw();                    // desenho
     void Finalize();                // finaliza��o
+    void markButtonPositions();
+    
 };
 
 // -----------------------------------------------------------------------------

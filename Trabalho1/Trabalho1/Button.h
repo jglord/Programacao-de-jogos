@@ -11,9 +11,6 @@
 #ifndef _BUTTON_H
 #define _BUTTON_H
 
-
-enum BUTTON_STATE{SELECTED, KICKING, STOPED};
-
 // ---------------------------------------------------------------------------------
 // Inclusões
 
@@ -21,20 +18,19 @@ enum BUTTON_STATE{SELECTED, KICKING, STOPED};
 #include "Object.h"                     // interface de Object
 #include "Sprite.h"                     // interface de Sprites
 
-
 // ---------------------------------------------------------------------------------
 
 class Button : public Object {
 private:
 
 public:
-	
-	uint state;
-	Sprite * sprite = nullptr;
+
+	Sprite* sprite = nullptr;
 	Button();
+	Button(string name);
 	~Button();
 
-	void OnCollision(Object * obj);
+	void OnCollision(Object* obj);
 
 	void Draw();
 	void Update();
