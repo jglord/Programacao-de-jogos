@@ -84,6 +84,12 @@
     <ClCompile Include="Ball.cpp">
       <Filter>Game\Arquivos de Origem</Filter>
     </ClCompile>
+    <ClCompile Include="ButtonGK.h">
+      <Filter>Game\Arquivos de Cabeçalho</Filter>
+    </ClCompile>
+    <ClCompile Include="Team.cpp">
+      <Filter>Game\Arquivos de Origem</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Engine.h">

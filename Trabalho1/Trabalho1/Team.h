@@ -18,10 +18,12 @@
 #include "Object.h"                     // interface de Object
 #include "Sprite.h"                     // interface de Sprites
 #include "Button.h"
+#include "ButtonGK.h"
+#include "Player.h"
 // ---------------------------------------------------------------------------------
 // Constantes Globais
 
-
+enum {ATTACKING, DEFEDING};
 
 // ---------------------------------------------------------------------------------
 
@@ -32,9 +34,17 @@ private:
 
 public:
 
-    Team(Button Buttons[11]);         // Construtor com 11 butões do time
+    Team(string name, Player*p){};                           // Construtor com 11 butões do time
+    
     Team();                           // construtor
     ~Team();                          // destrutor
+
+
+    string n;
+    Button* buttons[10];
+    ButtonGK* GK =nullptr ;
+    Player* player = nullptr;
+
 
 
     void OnCollision(Object* obj);     // resolução da colisão

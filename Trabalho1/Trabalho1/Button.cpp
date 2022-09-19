@@ -20,6 +20,12 @@ Button::Button(){
 	MoveTo(window->CenterX(), window->CenterY());
 }
 
+Button::Button(string name) {
+	sprite = new Sprite(name);
+	BBox(new Circle(21.5f));
+	MoveTo(window->CenterX(), window->CenterY());
+}
+
 Button::~Button() {
 	delete sprite;
 }

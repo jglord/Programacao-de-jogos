@@ -8,8 +8,8 @@
 // Descrição:   Botao do futbutton
 //
 **********************************************************************************/
-#ifndef _BUTTON_H
-#define _BUTTON_H
+#ifndef _BUTTONGK_H
+#define _BUTTONGK_H
 
 // ---------------------------------------------------------------------------------
 // Inclusões
@@ -20,22 +20,21 @@
 
 // ---------------------------------------------------------------------------------
 
-class Button : public Object {
+class ButtonGK : public Object {
 private:
-	Sprite * sprite = nullptr;
+	Sprite* sprite = nullptr;
 
 public:
 
-	Button();
-	Button(string name);
-	~Button();
+	ButtonGK();
+	~ButtonGK();
 
-	void OnCollision(Object * obj);
+	void OnCollision(Object* obj);
 
 	void Draw();
 	void Update();
 };
 
-inline void Button::Draw() { sprite->Draw(x, y, z); }
+inline void ButtonGK::Draw() { sprite->Draw(x, y, z); }
 
-#endif // !_BUTTON_H
+#endif // !_BUTTONGK_H

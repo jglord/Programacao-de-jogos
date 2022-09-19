@@ -25,7 +25,7 @@
 // Constantes Globais
 
 // estados possíveis para o jogador
-enum PLAYERSTATE {STOPED, UP, DOWN, LEFT, RIGHT};    
+enum PLAYERSTATE {SELECT, KICK, STOPED, PLAYING};    
 
 // ---------------------------------------------------------------------------------
 
@@ -35,9 +35,9 @@ private:
     
 
 public:
+    uint state;
 
     Player();                           // construtor
-    Player(Team * team);                // construir time
     ~Player();                          // destrutor
 
     void OnCollision(Object * obj);     // resolução da colisão
