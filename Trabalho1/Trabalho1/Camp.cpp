@@ -30,4 +30,5 @@ void Camp::OnCollision(Object* obj) {
 
 void Camp::Draw() {}
 
-void Camp::Update() {}
+void Camp::Update() {
+}

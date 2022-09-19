@@ -1,11 +1,11 @@
 /**********************************************************************************
-// Home (Código Fonte) 
+// Home (Cï¿½digo Fonte) 
 // 
-// Criação:     18 Jan 2013
-// Atualização: 25 Ago 2021
+// Criaï¿½ï¿½o:     18 Jan 2013
+// Atualizaï¿½ï¿½o: 25 Ago 2021
 // Compilador:  Visual C++ 2019
 //
-// Descrição:   Tela de abertura do jogo PacMan
+// Descriï¿½ï¿½o:   Tela de abertura do jogo PacMan
 //
 **********************************************************************************/
 
@@ -49,9 +49,7 @@ void Home::Init()
 
 void Home::Finalize()
 {
-   
-    delete camp;
-    delete button;
+    delete backg;
 }
 
 // ------------------------------------------------------------------------------
@@ -68,18 +66,19 @@ void Home::Update()
 // habilita/desabilita bounding box
     if (ctrlKeyB && window->KeyDown('B'))
     {
-        viewBBox = !viewBBox;
-        ctrlKeyB = false;
+        ctrlKeyESC = false;
+        window->Close();
     }
-    else if (window->KeyUp('B'))
+    else if (window->KeyUp(VK_ESCAPE))
     {
-        ctrlKeyB = true;
+        ctrlKeyESC = true;
     }
     /*
     Refazer logica de arrastar o botao pra o time todo
     
     if (window->KeyDown(VK_LBUTTON)) {
         if ((window->MouseX() > button->X() || window->MouseX() < button->X()) && (window->MouseY() > button->Y() || window->MouseY() < button->Y())) {
+
             stringstream ss;
             ss << "clicando dentro do eixo x\n\n";
             OutputDebugStringA(ss.str().c_str());
@@ -100,7 +99,7 @@ void Home::Update()
 
     scene->Update();
 
-    // detecção e resolução de colisão
+    // detecï¿½ï¿½o e resoluï¿½ï¿½o de colisï¿½o
     scene->CollisionDetection();
 }
 
@@ -108,12 +107,7 @@ void Home::Update()
 
 void Home::Draw()
 {
-    backg->Draw(float(window->CenterX()), float(window->CenterY()), Layer::BACK);
-    scene->Draw();
 
-    // desenha bounding box dos objetos
-    if (viewBBox)
-        scene->DrawBBox();
 }
 
 // ------------------------------------------------------------------------------

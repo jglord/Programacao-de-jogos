@@ -1,11 +1,11 @@
 /**********************************************************************************
-// Bola (Código Fonte)
+// Bola (Cï¿½digo Fonte)
 //
-// Criação:     12 Set 2022
-// Atualização: 12 Set 2022
+// Criaï¿½ï¿½o:     12 Set 2022
+// Atualizaï¿½ï¿½o: 12 Set 2022
 // Compilador:  Visual C++ 2022
 //
-// Descrição:   Bola do jogo Futbutton
+// Descriï¿½ï¿½o:   Bola do jogo Futbutton
 //
 **********************************************************************************/
 

@@ -1,20 +1,20 @@
 /**********************************************************************************
-// Button (Arquivo de Cabeçalho)
+// Button (Arquivo de Cabeï¿½alho)
 //
-// Criação:     11 Set 2022
-// Atualização: 11 Set 2022
+// Criaï¿½ï¿½o:     11 Set 2022
+// Atualizaï¿½ï¿½o: 11 Set 2022
 // Compilador:  Visual C++ 2022
 //
-// Descrição:   Botao do futbutton
+// Descriï¿½ï¿½o:   Botao do futbutton
 //
 **********************************************************************************/
 #ifndef _BUTTONGK_H
 #define _BUTTONGK_H
 
 // ---------------------------------------------------------------------------------
-// Inclusões
+// Inclusï¿½es
 
-#include "Types.h"                      // tipos específicos da engine
+#include "Types.h"                      // tipos especï¿½ficos da engine
 #include "Object.h"                     // interface de Object
 #include "Sprite.h"                     // interface de Sprites
 

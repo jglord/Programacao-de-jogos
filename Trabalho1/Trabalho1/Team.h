@@ -1,20 +1,20 @@
 /**********************************************************************************
-// Player (Arquivo de Cabeçalho)
+// Player (Arquivo de Cabeï¿½alho)
 //
-// Criação:     12 SET 2022
-// Atualização: 12 SET 2022
+// Criaï¿½ï¿½o:     12 SET 2022
+// Atualizaï¿½ï¿½o: 12 SET 2022
 // Compilador:  Visual C++ 2022
 //
-// Descrição:   Times do Futbutton//
+// Descriï¿½ï¿½o:   Times do Futbutton//
 **********************************************************************************/
 
 #ifndef _FUTBUTTON_TEAM_H_
 #define _FUTBUTTON_TEAM_H_
 
 // ---------------------------------------------------------------------------------
-// Inclusões
+// Inclusï¿½es
 
-#include "Types.h"                      // tipos específicos da engine
+#include "Types.h"                      // tipos especï¿½ficos da engine
 #include "Object.h"                     // interface de Object
 #include "Sprite.h"                     // interface de Sprites
 #include "Button.h"
@@ -33,6 +33,10 @@ private:
     Button * teamButtons[11];
 
 public:
+    string name;
+    Button buttons[10];
+    ButtonGK buttonGK;
+    Player  p;
 
     Team(string buttonFileName);
     ~Team();

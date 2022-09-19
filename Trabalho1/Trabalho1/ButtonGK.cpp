@@ -1,11 +1,11 @@
 /**********************************************************************************
-// Button (Código Fonte)
+// Button (Cï¿½digo Fonte)
 //
-// Criação:     11 Set 2022
-// Atualização: 11 Set 2022
+// Criaï¿½ï¿½o:     11 Set 2022
+// Atualizaï¿½ï¿½o: 11 Set 2022
 // Compilador:  Visual C++ 2022
 //
-// Descrição:   Botao do jogo Futbutton
+// Descriï¿½ï¿½o:   Botao do jogo Futbutton
 //
 **********************************************************************************/
 
