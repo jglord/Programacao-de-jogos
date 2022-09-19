@@ -16,7 +16,7 @@
 
 Camp::Camp() {
 	sprite = new Sprite("Resources/Camp.jpg");
-	
+
 	
 	//Criação de boundbox mista para as linhas do campo.
 	Mixed * mixed = new Mixed();						//Criação de BBox mista
