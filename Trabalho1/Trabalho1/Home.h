@@ -21,6 +21,7 @@
 #include "Scene.h"
 #include "Button.h"
 #include "Ball.h"
+#include "Path.h"
 
 // ------------------------------------------------------------------------------
 
@@ -30,21 +31,22 @@ class Home : public Game
 private:
     Sprite * backg  = nullptr;       // pano de fundo
     
-    bool ctrlKeyESC = false;         // controle do ESC
 
+
+    bool ctrlKeyESC = false;         // controle do ESC
     bool ctrlSpace  = false;          // controle do space
     bool ctrlKeyB   = false;           // controle da tecla B
-
     bool ctrlUp = false;             // controle da tecla up
     bool ctrlKeyDown = false;        // controle da tecla Down
-
-
+    bool ctrlKeyS = false;           //controle tecla S   
     bool ctrlLMouse = false;
 
+    bool viewScene = false;              // visualiza sprites da cena
 
 
     Scene * scene   = nullptr;       // gerenciador de cena
 
+    Path* path = nullptr;
     Button* button = nullptr;
     Camp * camp = nullptr;
     Ball * ball  = nullptr;

@@ -31,15 +31,14 @@
 class Path : public Object
 {
 private:
-
-
+    Button* button = nullptr;
 public:
-    Path(Button * b);                           // construtor
+    Path(Button * b);               // construtor
     ~Path();                          // destrutor
 
-    void OnCollision(Object* obj);     // resolução da colisão
-    void Update();                      // atualização do objeto
-    void Draw();                        // desenho do objeto
+    inline void OnCollision(Object* obj){};      // resolução da colisão
+    inline void Update();                      // atualização do objeto
+    inline void Draw(){};                        // desenho do objeto
 };
 
 // ---------------------------------------------------------------------------------

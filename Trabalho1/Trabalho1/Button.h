@@ -21,6 +21,7 @@ enum BUTTON_STATE{SELECTED, KICKING, STOPED};
 #include "Object.h"                     // interface de Object
 #include "Sprite.h"                     // interface de Sprites
 
+
 // ---------------------------------------------------------------------------------
 
 class Button : public Object {
@@ -28,7 +29,6 @@ private:
 
 public:
 	
-	Object* path;
 	uint state;
 	Sprite * sprite = nullptr;
 	Button();

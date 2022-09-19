@@ -11,7 +11,6 @@
 
 #include "Engine.h"
 #include "Home.h"
-#include "Level1.h"
 #include <sstream>
 using namespace std;
 
@@ -27,13 +26,14 @@ void Home::Init()
     scene->Add(button, MOVING);
     ball = new Ball();
     scene->Add(ball, MOVING);
+    path = new Path(button);
+    scene->Add(path, MOVING);
 }
 
 // ------------------------------------------------------------------------------
 
 void Home::Finalize()
 {
-    delete backg;
     delete scene;
 }
 
@@ -51,6 +51,17 @@ void Home::Update()
     else if (window->KeyUp(VK_ESCAPE))
     {
         ctrlKeyESC = true;
+    }
+
+    // habilita/desabilita visualização de sprites
+    if (ctrlKeyS && window->KeyDown('S'))
+    {
+        viewBBox = !viewBBox;
+        ctrlKeyS = false;
+    }
+    else if (window->KeyUp('S'))
+    {
+        ctrlKeyS = true;
     }
 
     if (window->KeyDown(VK_LBUTTON)) {
@@ -72,6 +83,9 @@ void Home::Update()
         ctrlLMouse = false;
     }
 
+
+
+
     scene->Update();
 
     // detec��o e resolu��o de colis�o
@@ -82,6 +96,11 @@ void Home::Update()
 
 void Home::Draw()
 {
+    // desenha a bounding box de todos os objetos
+    if (viewBBox)
+    {
+        scene->DrawBBox();
+    }
 
     backg->Draw(float(window->CenterX()), float(window->CenterY()), Layer::BACK);
     scene->Draw();
