@@ -75,6 +75,8 @@ void Home::Update()
             OutputDebugStringA(ss.str().c_str());
             ctrlLMouse = true;
 
+            button->BBox(new Line(button->X(), button->Y(), button->X() + 5, button->Y() + 5));
+
             button->MoveTo(window->MouseX(), window->MouseY());
 
         }

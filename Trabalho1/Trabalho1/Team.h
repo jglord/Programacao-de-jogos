@@ -26,32 +26,16 @@
 enum PLAYER_STATE {ATTACKING, DEFEDING};
 
 // ---------------------------------------------------------------------------------
-
-class Team : public Object
-{
-private:
-
-
-public:
-
-                  
-    Team(string name);             // Construtor com 11 butões do time  
-    Team();                           // construtor
-    ~Team();                          // destrutor
-
-
-    string n;
-    Button* buttons[10];
-    ButtonGK* GK = nullptr;
-
-
-
-    void OnCollision(Object* obj);     // resolução da colisão
-
-    void Update();                      // atualização do objeto
-    void Draw();                        // desenho do objeto
-};
-
-// ---------------------------------------------------------------------------------
-
+//
+//class Team : public Object
+//{
+//private:
+//
+//
+//public:
+//     
+//};
+//
+//// ---------------------------------------------------------------------------------
+//
 #endif

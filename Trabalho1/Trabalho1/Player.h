@@ -31,23 +31,7 @@ enum PLAYERSTATE { SELECT, KICK, STOPED, PLAYING };
 
 class Player : public Object
 {
-private:
-    Team * t;
-public:
-    uint state;
 
-    bool ctrlKeyESC = false;            // controle do ESC
-    bool ctrlSpace = false;             // controle do space
-    bool ctrlKeyB = false;              // controle da tecla B
-    bool ctrlLMouse = false;
-
-    Player();                           // construtor
-    Player(Team* team);
-    ~Player();                          // destrutor
-
-    void OnCollision(Object * obj);     // resolução da colisão
-    void Update();                      // atualização do objeto
-    void Draw();                        // desenho do objeto
 };
 
 // ---------------------------------------------------------------------------------
