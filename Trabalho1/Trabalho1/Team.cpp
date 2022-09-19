@@ -16,13 +16,9 @@
 #include "Ball.h"
 
 
-Team::Team(Player player, string name)
+Team::Team()
 {
-    p = player;         // definido o player que irá controlar o time
-    string spriteName1 = "\"Resources/";
-    string spriteName2 = name;
-    string spriteName3 = ".png\"";
-    string spriteName = spriteName1 + spriteName2 + spriteName3;
+
 }
 
 

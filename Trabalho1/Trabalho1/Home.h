@@ -35,15 +35,17 @@ private:
     bool ctrlSpace  = false;          // controle do space
     bool ctrlKeyB   = false;           // controle da tecla B
 
-    bool ctrlSpace = false;          // controle do space
     bool ctrlUp = false;             // controle da tecla up
     bool ctrlKeyDown = false;        // controle da tecla Down
 
 
     bool ctrlLMouse = false;
 
+
+
     Scene * scene   = nullptr;       // gerenciador de cena
 
+    Button* button = nullptr;
     Camp * camp = nullptr;
     Ball * ball  = nullptr;
 

@@ -36,11 +36,11 @@ public:
     string name;
     Button buttons[10];
     ButtonGK buttonGK;
-    Player  p;
+    
 
 
 
-    Team(Player player, string name);         // Construtor com 11 butões do time
+    Team();
     ~Team();                                    // destrutor
 
 

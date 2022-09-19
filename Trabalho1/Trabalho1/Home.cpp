@@ -19,7 +19,14 @@ using namespace std;
 
 void Home::Init()
 {
-	backg = new Sprite("Resources/TitleScreen.jpg");
+    scene = new Scene();
+    camp = new Camp();
+	backg = camp->sprite;
+    scene->Add(camp, STATIC);
+    button = new Button();
+    scene->Add(button, MOVING);
+    ball = new Ball();
+    scene->Add(ball, MOVING);
 }
 
 // ------------------------------------------------------------------------------
@@ -27,12 +34,14 @@ void Home::Init()
 void Home::Finalize()
 {
     delete backg;
+    delete scene;
 }
 
 // ------------------------------------------------------------------------------
 
 void Home::Update()
 {
+
     // sai do jogo com a tecla ESC
     if (ctrlKeyESC && window->KeyDown(VK_ESCAPE))
     {
@@ -74,6 +83,8 @@ void Home::Update()
 void Home::Draw()
 {
 
+    backg->Draw(float(window->CenterX()), float(window->CenterY()), Layer::BACK);
+    scene->Draw();
 }
 
 // ------------------------------------------------------------------------------

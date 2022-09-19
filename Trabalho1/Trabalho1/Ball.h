@@ -24,7 +24,7 @@
 // Constantes Globais
 
 // Estados possiveis da bola
-enum BALL_STATE {SIDE,GOALKICK,KICKOFF,CORNER, MOVING};
+enum BALL_STATE {SIDE,GOALKICK,KICKOFF,CORNER, PLAYING};
 
 
 

@@ -37,7 +37,6 @@ private:
 public:
 
     Player();                           // construtor
-    Player(Team * team);                // construir time
     ~Player();                          // destrutor
 
     void OnCollision(Object * obj);     // resolução da colisão

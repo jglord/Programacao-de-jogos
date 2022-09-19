@@ -84,9 +84,6 @@
     <ClCompile Include="Ball.cpp">
       <Filter>Game\Arquivos de Origem</Filter>
     </ClCompile>
-    <ClCompile Include="Team.cpp">
-      <Filter>Game\Arquivos de Origem</Filter>
-    </ClCompile>
     <ClCompile Include="ButtonGK.cpp">
       <Filter>Game\Arquivos de Origem</Filter>
     </ClCompile>
@@ -147,9 +144,6 @@
       <Filter>Game\Arquivos de Cabeçalho</Filter>
     </ClInclude>
     <ClInclude Include="Camp.h">
-      <Filter>Game\Arquivos de Cabeçalho</Filter>
-    </ClInclude>
-    <ClInclude Include="Team.h">
       <Filter>Game\Arquivos de Cabeçalho</Filter>
     </ClInclude>
     <ClInclude Include="Ball.h">
