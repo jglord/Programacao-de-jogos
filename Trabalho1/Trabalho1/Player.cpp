@@ -13,14 +13,13 @@
 #include "Player.h"
 
 // ---------------------------------------------------------------------------------
-Player::Player()
-{
+Player::Player() {
     state = STOPED;
- 
+    this->t = nullptr;
 }
 Player::Player(Team* team)
 {
-    t = team;
+    this->t = team;
     state = STOPED;
 }
 // ---------------------------------------------------------------------------------

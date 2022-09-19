@@ -23,7 +23,7 @@
 // ---------------------------------------------------------------------------------
 // Constantes Globais
 
-enum {ATTACKING, DEFEDING};
+enum PLAYER_STATE {ATTACKING, DEFEDING};
 
 // ---------------------------------------------------------------------------------
 
@@ -42,8 +42,7 @@ public:
 
     string n;
     Button* buttons[10];
-    ButtonGK* GK =nullptr ;
-    Player* player = nullptr;
+    ButtonGK* GK = nullptr;
 
 
 

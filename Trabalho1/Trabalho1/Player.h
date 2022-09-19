@@ -25,15 +25,14 @@
 // Constantes Globais
 
 // estados possíveis para o jogador
-enum PLAYERSTATE {SELECT, KICK, STOPED, PLAYING};    
+enum PLAYERSTATE { SELECT, KICK, STOPED, PLAYING };
 
 // ---------------------------------------------------------------------------------
 
 class Player : public Object
 {
 private:
-    Team* t = nullptr;
-
+    Team * t;
 public:
     uint state;
 
