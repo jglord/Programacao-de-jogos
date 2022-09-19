@@ -33,7 +33,7 @@ class Path : public Object
 private:
     Button* button = nullptr;
 public:
-    Path(Button * b);               // construtor
+    Path(Button * b);                   // construtor
     ~Path(){};                          // destrutor
 
     inline void OnCollision(Object* obj){};      // resolução da colisão

@@ -15,9 +15,23 @@
 
 
 Camp::Camp() {
-	//Rect rect = new Rect();
 	sprite = new Sprite("Resources/Camp.jpg");
-	BBox(new Rect(*new Point(58, 25), *new Point(1092, 728)));
+	
+	
+	//Criação de boundbox mista para as linhas do campo.
+	Mixed * mixed = new Mixed();						//Criação de BBox mista
+	
+	Line* lineUP = new Line(80.5, 33, 1115.5, 33);		//Linha de cima
+	Line* lineLEFT = new Line(80, 33.5, 80, 736.5);		//Linha da esquerda
+	Line* lineDOWN = new Line(80, 736.5, 1115, 736.5);	//Linha de baixo
+	Line* lineRIGHT = new Line(1115, 736.5, 1115, 33);	//Linha da direita
+	
+	//Inserindo linhas na bbox e instanciando.
+	mixed->Insert(lineUP);
+	mixed->Insert(lineLEFT);
+	mixed->Insert(lineDOWN);
+	mixed->Insert(lineRIGHT);
+	BBox(mixed);
 }
 
 Camp::~Camp() {

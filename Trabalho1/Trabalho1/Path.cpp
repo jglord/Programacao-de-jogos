@@ -25,13 +25,16 @@ Path::Path(Button* b)
 		if ((window->MouseX() > button->X() || window->MouseX() < button->X()) && (window->MouseY() > button->Y() || window->MouseY() < button->Y())) {
 			Xi = button->X();
 			Yi = button->Y();
+			button = b;
 			ctrlLeftClick = true;
 		}
+
 	} else if (window->KeyUp(VK_LBUTTON)) {
 		Xf = button->X();
 		Yf = button->Y();
 		ctrlLeftClick = false;
 	}
+	
 	//calculando tamanho da linha
 	if (Xi > Xf) // Fazendo o maior valor - o menor para saber o tamanho da linha
 		X = Xi - Xf;
