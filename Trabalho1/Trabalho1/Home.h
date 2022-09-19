@@ -23,12 +23,6 @@
 #include "Ball.h"
 
 // ------------------------------------------------------------------------------
-enum BALL_STATE {
-    SIDE,
-    GOALKICK,
-    KICKOFF,
-    CORNER
-};
 
 
 class Home : public Game

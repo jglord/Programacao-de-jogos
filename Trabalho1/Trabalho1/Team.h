@@ -34,8 +34,8 @@ private:
 
 public:
 
-    Team(string name, Player*p){};                           // Construtor com 11 butões do time
-    
+                  
+    Team(string name);             // Construtor com 11 butões do time  
     Team();                           // construtor
     ~Team();                          // destrutor
 

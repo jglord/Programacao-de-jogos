@@ -50,7 +50,14 @@ void Home::Finalize()
 
 void Home::Update()
 {
-    // habilita/desabilita bounding box
+
+//----------------------------------------------------------------------------------------------------------------------------------
+     /*TEM QUE LEVAR ESSE UPDATE PRO BALL E FAZER A HOME*/
+//----------------------------------------------------------------------------------------------------------------------------------
+
+
+
+// habilita/desabilita bounding box
     if (ctrlKeyB && window->KeyDown('B'))
     {
         viewBBox = !viewBBox;

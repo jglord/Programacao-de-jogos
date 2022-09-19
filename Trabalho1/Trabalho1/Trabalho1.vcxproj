@@ -165,6 +165,7 @@
   <ItemGroup>
     <ClCompile Include="Ball.cpp" />
     <ClCompile Include="Button.cpp" />
+    <ClCompile Include="ButtonGK.cpp" />
     <ClCompile Include="ButtonGK.h" />
     <ClCompile Include="Camp.cpp" />
     <ClCompile Include="Engine.cpp" />

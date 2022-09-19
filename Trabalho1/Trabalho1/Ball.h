@@ -19,6 +19,13 @@
 #include "Sprite.h"                     // interface de Sprites
 #include "Player.h"
 
+
+enum BALL_STATE {
+	SIDE,
+	GOALKICK,
+	KICKOFF,
+	CORNER
+};
 // ---------------------------------------------------------------------------------
 
 class Ball : public Object {

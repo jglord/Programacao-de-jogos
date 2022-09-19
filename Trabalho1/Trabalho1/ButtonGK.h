@@ -27,6 +27,7 @@ private:
 public:
 
 	ButtonGK();
+	ButtonGK(string name);
 	~ButtonGK();
 
 	void OnCollision(Object* obj);
@@ -34,6 +35,7 @@ public:
 	void Draw();
 	void Update();
 };
+
 
 inline void ButtonGK::Draw() { sprite->Draw(x, y, z); }
 
