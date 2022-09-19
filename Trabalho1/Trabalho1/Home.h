@@ -1,11 +1,11 @@
 /**********************************************************************************
-// Home (Arquivo de Cabeï¿½alho)
-// 
-// Criaï¿½ï¿½o:     18 Jan 2013
-// Atualizaï¿½ï¿½o: 25 Ago 2021
+// Home (Arquivo de Cabeçalho)
+//
+// Criação:     18 Jan 2013
+// Atualização: 25 Ago 2021
 // Compilador:  Visual C++ 2019
 //
-// Descriï¿½ï¿½o:   Tela de abertura do jogo PacMan
+// Descrição:   Tela de abertura do jogo PacMan
 //
 **********************************************************************************/
 
@@ -13,53 +13,24 @@
 #define _FUTBUTTON_HOME_H_
 
 // ------------------------------------------------------------------------------
-// Inclusï¿½es
+// Inclusões
 
 #include "Game.h"
-#include "Camp.h"
 #include "Sprite.h"
-#include "Scene.h"
-#include "Button.h"
-#include "Ball.h"
-#include "Path.h"
 
 // ------------------------------------------------------------------------------
-
 
 class Home : public Game
 {
 private:
-    Sprite * backg  = nullptr;       // pano de fundo
-    
+    Sprite* backg = nullptr;       // pano de fundo
+    bool ctrlKeyESC = false;        // controle do ESC
 
-
-    bool ctrlKeyESC = false;         // controle do ESC
-    bool ctrlSpace  = false;          // controle do space
-    bool ctrlKeyB   = false;           // controle da tecla B
-    bool ctrlUp = false;             // controle da tecla up
-    bool ctrlKeyDown = false;        // controle da tecla Down
-    bool ctrlKeyS = false;           //controle tecla S   
-    bool ctrlLMouse = false;
-
-    bool viewScene = false;              // visualiza sprites da cena
-
-
-    Scene * scene   = nullptr;       // gerenciador de cena
-
-    Path* path = nullptr;
-    Button* button = nullptr;
-    Camp * camp = nullptr;
-    Ball * ball  = nullptr;
-
-    bool ballCtrl;                  // flag para saber se bola esta em jogo ou nao
-
-
-    bool viewBBox = false;          // habilita visualizaï¿½ï¿½o da bounding box
 public:
-    void Init();                    // inicializaï¿½ï¿½o
-    void Update();                  // atualizaï¿½ï¿½o
+    void Init();                    // inicialização
+    void Update();                  // atualização
     void Draw();                    // desenho
-    void Finalize();                // finalizaï¿½ï¿½o
+    void Finalize();                // finalização
 };
 
 // -----------------------------------------------------------------------------

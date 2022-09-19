@@ -34,10 +34,10 @@ private:
     Button* button = nullptr;
 public:
     Path(Button * b);               // construtor
-    ~Path();                          // destrutor
+    ~Path(){};                          // destrutor
 
     inline void OnCollision(Object* obj){};      // resolução da colisão
-    inline void Update();                      // atualização do objeto
+    inline void Update(){};                      // atualização do objeto
     inline void Draw(){};                        // desenho do objeto
 };
 

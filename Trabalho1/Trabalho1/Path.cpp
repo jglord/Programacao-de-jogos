@@ -17,17 +17,6 @@
 Path::Path(Button* b)
 {
 	button = b;
-}
-
-// ---------------------------------------------------------------------------------
-
-Path::~Path()
-{
-	delete button;
-}
-
-inline void Path::Update()
-{
 	float Xi{}, Yi{}, Xf{}, Yf{}, X, Y = NULL; // Atributos para guardar as coordenadas do primeiro click no botão
 	bool ctrlLeftClick = false; // Atributo para obter a posição do primeiro click.
 
@@ -38,8 +27,7 @@ inline void Path::Update()
 			Yi = button->Y();
 			ctrlLeftClick = true;
 		}
-	}
-	else if (window->KeyUp(VK_LBUTTON)) {
+	} else if (window->KeyUp(VK_LBUTTON)) {
 		Xf = button->X();
 		Yf = button->Y();
 		ctrlLeftClick = false;
@@ -53,11 +41,15 @@ inline void Path::Update()
 		Y = Yi - Yf;
 	if (Yi < Yf) // Fazendo o maior valor - o menor para saber o tamanho da linha
 		Y = Yf - Yi;
-
+	
 	//criando bbox da linha
-	BBox(new Line(Xf, Yf, (Xf + X), (Yf + Y))); // linha começa no ponto final do botão e termina na coordenada
+	BBox(new Line(Xf, Yf,(Xf + X),(Yf + Y))); // linha começa no ponto final do botão e termina na coordenada
 												//  que posição final + tamanho da linha
 }
+
+// ---------------------------------------------------------------------------------
+
+
 
 // ---------------------------------------------------------------------------------
 

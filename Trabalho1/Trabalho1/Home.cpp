@@ -1,47 +1,36 @@
 /**********************************************************************************
-// Home (Cï¿½digo Fonte) 
-// 
-// Criaï¿½ï¿½o:     18 Jan 2013
-// Atualizaï¿½ï¿½o: 25 Ago 2021
+// Home (Código Fonte)
+//
+// Criação:     18 Jan 2013
+// Atualização: 25 Ago 2021
 // Compilador:  Visual C++ 2019
 //
-// Descriï¿½ï¿½o:   Tela de abertura do jogo PacMan
+// Descrição:   Tela de abertura do jogo PacMan
 //
 **********************************************************************************/
 
 #include "Engine.h"
 #include "Home.h"
-#include <sstream>
-using namespace std;
+#include "Teste.h"
 
 // ------------------------------------------------------------------------------
 
 void Home::Init()
 {
-    scene = new Scene();
-    camp = new Camp();
-	backg = camp->sprite;
-    scene->Add(camp, STATIC);
-    button = new Button();
-    scene->Add(button, MOVING);
-    ball = new Ball();
-    scene->Add(ball, MOVING);
-    path = new Path(button);
-    scene->Add(path, MOVING);
+    backg = new Sprite("Resources/TitleScreen.jpg");
 }
 
 // ------------------------------------------------------------------------------
 
 void Home::Finalize()
 {
-    delete scene;
+    delete backg;
 }
 
 // ------------------------------------------------------------------------------
 
 void Home::Update()
 {
-
     // sai do jogo com a tecla ESC
     if (ctrlKeyESC && window->KeyDown(VK_ESCAPE))
     {
@@ -53,57 +42,16 @@ void Home::Update()
         ctrlKeyESC = true;
     }
 
-    // habilita/desabilita visualizaÃ§Ã£o de sprites
-    if (ctrlKeyS && window->KeyDown('S'))
-    {
-        viewBBox = !viewBBox;
-        ctrlKeyS = false;
-    }
-    else if (window->KeyUp('S'))
-    {
-        ctrlKeyS = true;
-    }
-
-    if (window->KeyDown(VK_LBUTTON)) {
-        if ((window->MouseX() > button->X() || window->MouseX() < button->X()) && (window->MouseY() > button->Y() || window->MouseY() < button->Y())) {
-
-            stringstream ss;
-            ss << "clicando dentro do eixo x\n\n";
-            OutputDebugStringA(ss.str().c_str());
-            ctrlLMouse = true;
-
-            button->MoveTo(window->MouseX(), window->MouseY());
-
-        }
-    }
-    else if (ctrlLMouse && window->KeyUp(VK_LBUTTON)) {
-        stringstream ss;
-        ss << "Soltou\n\n";
-        OutputDebugStringA(ss.str().c_str());
-        ctrlLMouse = false;
-    }
-
-
-
-
-    scene->Update();
-
-    // detecï¿½ï¿½o e resoluï¿½ï¿½o de colisï¿½o
-    scene->CollisionDetection();
+    // passa ao primeiro nível com ENTER
+    if (window->KeyDown(VK_RETURN))
+        Engine::Next<Teste>();
 }
 
 // ------------------------------------------------------------------------------
 
 void Home::Draw()
 {
-    // desenha a bounding box de todos os objetos
-    if (viewBBox)
-    {
-        scene->DrawBBox();
-    }
-
     backg->Draw(float(window->CenterX()), float(window->CenterY()), Layer::BACK);
-    scene->Draw();
 }
 
 // ------------------------------------------------------------------------------
