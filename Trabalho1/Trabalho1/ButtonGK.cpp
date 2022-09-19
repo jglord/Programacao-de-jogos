@@ -13,6 +13,7 @@
 #include "ButtonGK.h"
 #include "Player.h"
 
+/*
 
 ButtonGK::ButtonGK() {
 	sprite = new Sprite("Resources/buttonBrasil.png");
@@ -33,12 +34,5 @@ ButtonGK::~ButtonGK() {
 void Button::OnCollision(Object* obj) {
 	obj->Translate(5, 0);
 }
+*/
 
-
-void Button::Update() {
-
-	//Mantem bola dentro da tela
-	// 
-	//Sinaliza que a bola saiu do campo
-
-}

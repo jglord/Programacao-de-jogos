@@ -12,24 +12,38 @@
 #include "FutButton.h"
 #include "Team.h"
 
-//
-//
-//Team::Team() {
-//}
-//
-//
-//Team::Team(string name) {
-//    
-//}
-//
-//
-//Team::~Team() {
-//    
-//}
-//
-//void Team::OnCollision(Object* obj) {
-//}
-//
-//
-//void Team::Update() {
-//}
+
+
+Team::Team(string buttonFileName) {
+    for (int i = 0; i < 10; i++) {
+        teamButtons[i] = new Button(buttonFileName);
+    }
+}
+
+
+void Team::organizeTeamInCamp(Point * buttonsPositions[11]) {
+    float j = 0;
+    for (int i = 0; i < 10; i++) {
+        teamButtons[i]->MoveTo(buttonsPositions[i]->X(), buttonsPositions[i]->Y());
+        j += 10;
+    }
+}
+
+
+Team::~Team() {
+    
+}
+
+void Team::OnCollision(Object* obj) {
+}
+
+
+void Team::Update() {
+}
+
+
+void Team::Draw() {
+    for (int i = 0; i < 10; i++) {
+        teamButtons[i]->Draw();
+    }
+}

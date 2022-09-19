@@ -37,9 +37,18 @@ private:
     bool ctrlLMouse = false;
 
     Scene * scene   = nullptr;       // gerenciador de cena
+    
+    Point* buttonPositions1[11];
+    Point* buttonPositions2[11];
 
     Camp * camp = nullptr;
     Ball * ball  = nullptr;
+
+    Team* team1 = nullptr;
+    Team* team2 = nullptr;
+
+
+
 
     bool ballCtrl;                  // flag para saber se bola esta em jogo ou nao
 
@@ -50,6 +59,7 @@ public:
     void Update();                  // atualização
     void Draw();                    // desenho
     void Finalize();                // finalização
+    void markButtonPositions();
 };
 
 // -----------------------------------------------------------------------------

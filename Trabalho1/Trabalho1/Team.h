@@ -26,16 +26,25 @@
 enum PLAYER_STATE {ATTACKING, DEFEDING};
 
 // ---------------------------------------------------------------------------------
-//
-//class Team : public Object
-//{
-//private:
-//
-//
-//public:
-//     
-//};
-//
-//// ---------------------------------------------------------------------------------
+
+class Team : public Object
+{
+private:
+    Button * teamButtons[10];
+
+public:
+
+    Team(string buttonFileName);
+    ~Team();
+
+    void OnCollision(Object* obj);
+    void organizeTeamInCamp(Point* buttonsPositions[11]);
+    
+    void Update();
+    void Draw();
+
+};
+
+// ---------------------------------------------------------------------------------
 //
 #endif
