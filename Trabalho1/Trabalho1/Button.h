@@ -11,6 +11,9 @@
 #ifndef _BUTTON_H
 #define _BUTTON_H
 
+
+enum BUTTON_STATE{SELECTED, KICKING, STOPED};
+
 // ---------------------------------------------------------------------------------
 // Inclusões
 
@@ -24,7 +27,9 @@ class Button : public Object {
 private:
 
 public:
-
+	
+	Object* path;
+	uint state;
 	Sprite * sprite = nullptr;
 	Button();
 	~Button();

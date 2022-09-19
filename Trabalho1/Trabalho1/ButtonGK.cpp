@@ -30,7 +30,7 @@ void ButtonGK::OnCollision(Object* obj) {
 
 
 void ButtonGK::Update() {
-
+	
 	//Mantem bola dentro da tela
 	// 
 	//Sinaliza que a bola saiu do campo

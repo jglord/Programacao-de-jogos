@@ -175,6 +175,8 @@
     <ClCompile Include="Image.cpp" />
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="FutButton.cpp" />
+    <ClCompile Include="Path.cpp" />
+    <ClCompile Include="Path.h" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="Scene.cpp" />

@@ -30,7 +30,9 @@ void Button::OnCollision(Object* obj) {
 
 
 void Button::Update(){
+	if (window->KeyDown(VK_LBUTTON)) {
 
+	}
 	//if (window->KeyDown(VK_LBUTTON)) {
 		
 		
