@@ -14,7 +14,6 @@
 #include "Pivot.h"
 
 // ---------------------------------------------------------------------------------
-
 Player::Player()
 {
     spriteL = new Sprite("Resources/PacManL.png");
