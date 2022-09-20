@@ -29,16 +29,13 @@ void Button::OnCollision(Object* obj) {
 }
 
 
-void Button::Update(){
+void Button::Update() {
 	if (window->KeyDown(VK_LBUTTON)) {
-
+		ctrlLeft = true;
+		if ((window->MouseX() > X() || window->MouseX() < X()) && (window->MouseY() > Y() || window->MouseY() < Y())) {
+			MoveTo(window->MouseX(), window->MouseY());
+		}
 	}
-	//if (window->KeyDown(VK_LBUTTON)) {
-		
-		
-			/*if (window->MouseY() > y && window->MouseY() < sprite->Height())
-			sprite->Draw(window->MouseX(), window->MouseY());*/
-
-	//}
-
+	if (window->KeyUp(VK_LBUTTON))
+		ctrlLeft = false;
 }

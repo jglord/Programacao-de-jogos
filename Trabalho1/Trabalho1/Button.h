@@ -29,6 +29,7 @@ private:
 
 public:
 	
+	bool ctrlLeft = false;
 	uint state;
 	Sprite * sprite = nullptr;
 	Button();

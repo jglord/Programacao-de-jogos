@@ -26,9 +26,7 @@ void Teste::Init()
     scene->Add(button, MOVING);
     ball = new Ball();
     scene->Add(ball, MOVING);
-    path = new Path(button);
-    scene->Add(path, MOVING);
-}
+  }
 
 // ------------------------------------------------------------------------------
 
@@ -63,26 +61,6 @@ void Teste::Update()
     {
         ctrlKeyS = true;
     }
-
-    if (window->KeyDown(VK_LBUTTON)) {
-        if ((window->MouseX() > button->X() || window->MouseX() < button->X()) && (window->MouseY() > button->Y() || window->MouseY() < button->Y())) {
-
-            stringstream ss;
-            ss << "clicando dentro do eixo x\n\n";
-            OutputDebugStringA(ss.str().c_str());
-            ctrlLMouse = true;
-
-            button->MoveTo(window->MouseX(), window->MouseY());
-
-        }
-    }
-    else if (ctrlLMouse && window->KeyUp(VK_LBUTTON)) {
-        stringstream ss;
-        ss << "Soltou\n\n";
-        OutputDebugStringA(ss.str().c_str());
-        ctrlLMouse = false;
-    }
-
 
 
 

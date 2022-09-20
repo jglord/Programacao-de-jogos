@@ -25,7 +25,6 @@
 // Constantes Globais
 
 // estados possíveis para o jogador
-enum PLAYERSTATE {UP, DOWN, LEFT, RIGHT};    
 
 // ---------------------------------------------------------------------------------
 
