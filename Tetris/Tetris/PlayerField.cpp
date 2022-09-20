@@ -11,18 +11,27 @@
 
 // ---------------------------------------------------------------------------------
 // Inclusões
-#include "Block.h"
+#include "PlayerField.h"
 
-Block::Block() {
-	sprite = new Sprite("Resources/quadrado50px.png");
-	BBox(new Rect());
-	MoveTo(100, 100);
-}
 
-Block::~Block() {
+
+Playerfield::Playerfield() {
+	Mixed * mixed = new Mixed();
+	
+	sprite = new Sprite("Resources/PlayerfieldBlue.png");
+
+	MoveTo(float(window->CenterX()), float(window->CenterY()), Layer::LOWER);
+
+	Line* line1 = new Line(110, 36, 366, 36);
+	line1->MoveTo(117, 600);
+	mixed->Insert(line1);
+	BBox(mixed);
+	}
+
+Playerfield::~Playerfield() {
 	delete sprite;
 }
 
-void Block::Update() {
+void Playerfield::Update() {
 
 }

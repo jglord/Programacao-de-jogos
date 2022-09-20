@@ -28,10 +28,14 @@ void Level1::Init()
     scene = new Scene();
 
     // cria playerfield
-    playerField = new Sprite("Resources/PlayerfieldBlue.png");
+    playerField = new Playerfield();
     block = new Block();
     scene->Add(block, MOVING);
 
+    scene->Add(playerField, STATIC);
+
+    backg = new Sprite("Resources/background.jpg");
+    
     
 }
 
@@ -39,7 +43,6 @@ void Level1::Init()
 
 void Level1::Finalize()
 {
-    delete playerField;
     delete scene;
 }
 
@@ -81,12 +84,13 @@ void Level1::Update()
 void Level1::Draw()
 {
     // desenha cena
-    playerField->Draw(float(window->CenterX()), float(window->CenterY()), Layer::BACK);
     scene->Draw();
 
     // desenha bounding box dos objetos
     if (viewBBox)
         scene->DrawBBox();
+
+    backg->Draw(float(window->CenterX()), float(window->CenterY()), Layer::BACK);
 }
 
 // ------------------------------------------------------------------------------

@@ -172,6 +172,7 @@
     <ClCompile Include="Level1.cpp" />
     <ClCompile Include="Object.cpp" />
     <ClCompile Include="Block.cpp" />
+    <ClCompile Include="PlayerField.cpp" />
     <ClCompile Include="Tetris.cpp" />
     <ClCompile Include="Renderer.cpp" />
     <ClCompile Include="Scene.cpp" />
@@ -190,6 +191,7 @@
     <ClInclude Include="Image.h" />
     <ClInclude Include="Level1.h" />
     <ClInclude Include="Object.h" />
+    <ClInclude Include="PlayerField.h" />
     <ClInclude Include="Tetris.h" />
     <ClInclude Include="Renderer.h" />
     <ClInclude Include="Resources.h" />

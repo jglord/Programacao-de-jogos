@@ -111,8 +111,8 @@ Line::Line(Point& pa, Point& pb)
 Rect::Rect()
 {
     // cria retângulo de (0,0) até (0,0)
-    left = right  = 0.0f;
-    top  = bottom = 0.0f;
+    left = right  = 25.0f;
+    top  = bottom = 25.0f;
     type = RECTANGLE_T;
 }
 

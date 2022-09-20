@@ -19,6 +19,7 @@
 #include "Sprite.h"
 #include "Scene.h"
 #include "Block.h"
+#include "PlayerField.h"
 
 
 // ------------------------------------------------------------------------------
@@ -26,7 +27,9 @@
 class Level1 : public Game
 {
 private:
-    Sprite * playerField = nullptr;       // playerfield
+    Playerfield * playerField = nullptr; // playerfield
+    Sprite * backg = nullptr;       // background
+
     Scene  * scene = nullptr;       // gerenciador de cena
     Block* block = nullptr;
 
