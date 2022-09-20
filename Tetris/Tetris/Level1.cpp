@@ -15,6 +15,8 @@
 #include "Level2.h"
 #include "Player.h"
 #include "Pivot.h"
+#include "Block2.h"
+
 #include <string>
 #include <fstream>
 using std::ifstream;
@@ -26,11 +28,14 @@ void Level1::Init()
 {
     // cria gerenciador de cena
     scene = new Scene();
-
     // cria playerfield
     playerField = new Playerfield();
-    block = new Block();
-    scene->Add(block, MOVING);
+    block2 = new Block2(BLOCKTYPE1);
+    scene->Add(block2, MOVING);
+
+    for (int i = 0; i < 4; i++) {
+        scene->Add(block2->blocks[i], MOVING);
+    }
 
     scene->Add(playerField, STATIC);
 

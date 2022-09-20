@@ -18,7 +18,7 @@
 #include "Game.h"
 #include "Sprite.h"
 #include "Scene.h"
-#include "Block.h"
+#include "Block2.h"
 #include "PlayerField.h"
 
 
@@ -31,7 +31,7 @@ private:
     Sprite * backg = nullptr;       // background
 
     Scene  * scene = nullptr;       // gerenciador de cena
-    Block* block = nullptr;
+    Block2 * block2 = nullptr;
 
     bool viewBBox = false;          // habilita visualização da bounding box
     bool ctrlKeyB = false;          // controle da tecla B

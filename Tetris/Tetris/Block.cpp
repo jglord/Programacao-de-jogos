@@ -13,10 +13,10 @@
 // Inclusões
 #include "Block.h"
 
-Block::Block() {
+Block::Block(int x, int y) {
 	sprite = new Sprite("Resources/quadrado50px.png");
-	BBox(new Rect(x - (sprite->Width() / 2), y - (sprite->Height() / 2), x + (sprite->Width() / 2), y + (sprite->Height() / 2)));
-	MoveTo(100, 100);
+	BBox(new Rect(x - (sprite->Width() / 2) / 2, y - (sprite->Height() / 2) * 2, x + (sprite->Width() / 2) / 2, y + (sprite->Height() / 2)));
+	//MoveTo(x, y);
 }
 
 Block::~Block() {

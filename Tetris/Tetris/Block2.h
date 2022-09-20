@@ -22,6 +22,7 @@
 
 
 // ---------------------------------------------------------------------------------
+enum typesblock { BLOCKTYPE1, BLOCKTYPE2, BLOCKTYPE3, BLOCKTYPE4, BLOCKTYPE5, BLOCKTYPE6 };
 
 class Block2 : public Object
 {
@@ -29,7 +30,8 @@ private:
     Sprite* sprite = nullptr;          // sprite da comida
 
 public:
-    Block2(Block * blocks[4]);                             // construtor
+    Block* blocks[4];
+    Block2(int blockType);                             // construtor
     ~Block2();                            // destrutor
 
     void Update();                      // atualização do objeto

@@ -27,7 +27,7 @@ private:
     Sprite* sprite = nullptr;          // sprite da comida
 
 public:
-    Block();                             // construtor
+    Block(int x, int y);                             // construtor
     ~Block();                            // destrutor
 
     void Update();                      // atualização do objeto
@@ -38,7 +38,7 @@ public:
 
 inline void Block::Draw()
 {
-    sprite->Draw(x, y, z);
+    //sprite->Draw(x, y, z);
 }
 
 // ---------------------------------------------------------------------------------
