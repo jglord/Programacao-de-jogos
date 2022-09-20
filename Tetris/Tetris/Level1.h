@@ -20,6 +20,7 @@
 #include "Scene.h"
 #include "Block2.h"
 #include "PlayerField.h"
+#include "Pivot.h"
 
 
 // ------------------------------------------------------------------------------
@@ -29,9 +30,12 @@ class Level1 : public Game
 private:
     Playerfield * playerField = nullptr; // playerfield
     Sprite * backg = nullptr;       // background
+    Pivot* pivots[20][10];
 
     Scene  * scene = nullptr;       // gerenciador de cena
     Block2 * block2 = nullptr;
+
+    float X, Y;                     // atributos para guardar posições do pivot
 
     bool viewBBox = false;          // habilita visualização da bounding box
     bool ctrlKeyB = false;          // controle da tecla B

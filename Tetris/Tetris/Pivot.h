@@ -9,8 +9,8 @@
 //
 **********************************************************************************/
 
-#ifndef _PACMAN_PIVOT_H_
-#define _PACMAN_PIVOT_H_
+#ifndef _TETRIS_PIVOT_H_
+#define _TETRIS_PIVOT_H_
 
 // ---------------------------------------------------------------------------------
 // Inclusões
@@ -23,16 +23,14 @@
 class Pivot : public Object
 {
 public:
-    bool left  = false;                     // passagem livre a esquerda
-    bool right = false;                     // passagem livre a direita
-    bool up    = false;                     // passagem livre para cima
-    bool down  = false;                     // passagem livre para baixo
-
-    Pivot(bool l, bool r, bool u, bool d);  // construtor
+    bool filled = false;                    // atributo para verificar se o quadrado está preenchido
+    Pivot(float PosX, float PosY);                                // construtor
     ~Pivot();                               // destrutor
 
     void Update() {};                       // atualização
     void Draw() {};                         // desenho
+
+    void OnCollision(Object* obj);
 };
 
 // ---------------------------------------------------------------------------------
