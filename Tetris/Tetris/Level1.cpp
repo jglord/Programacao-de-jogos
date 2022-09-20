@@ -29,7 +29,9 @@ void Level1::Init()
 
     // cria playerfield
     playerField = new Sprite("Resources/PlayerfieldBlue.png");
-    
+    block = new Block();
+    scene->Add(block, MOVING);
+
     
 }
 
