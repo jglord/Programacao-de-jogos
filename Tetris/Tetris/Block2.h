@@ -22,6 +22,7 @@
 
 
 // ---------------------------------------------------------------------------------
+enum typesblock { BLOCKTYPE1, BLOCKTYPE2, BLOCKTYPE3, BLOCKTYPE4, BLOCKTYPE5, BLOCKTYPE6 };
 
 class Block2 : public Object
 {
