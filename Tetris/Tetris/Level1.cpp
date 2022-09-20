@@ -28,11 +28,14 @@ void Level1::Init()
     scene = new Scene();
 
     // cria playerfield
+    Pivot* pivot1 = new Pivot(502, 130);
     playerField = new Playerfield();
     block = new Block();
+    
     scene->Add(block, MOVING);
-
     scene->Add(playerField, STATIC);
+    scene->Add(pivot1, STATIC);
+
 
     backg = new Sprite("Resources/background.jpg");
     

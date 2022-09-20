@@ -20,6 +20,7 @@
 #include "Scene.h"
 #include "Block.h"
 #include "PlayerField.h"
+#include "Pivot.h"
 
 
 // ------------------------------------------------------------------------------
@@ -29,6 +30,7 @@ class Level1 : public Game
 private:
     Playerfield * playerField = nullptr; // playerfield
     Sprite * backg = nullptr;       // background
+    Pivot* pivot1 = nullptr;
 
     Scene  * scene = nullptr;       // gerenciador de cena
     Block* block = nullptr;

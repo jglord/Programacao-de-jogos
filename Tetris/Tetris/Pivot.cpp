@@ -9,26 +9,29 @@
 //
 **********************************************************************************/
 
-#include "PacMan.h"
+#include "Tetris.h"
 #include "Pivot.h"
 
 // ---------------------------------------------------------------------------------
 
-Pivot::Pivot(bool l, bool r, bool u, bool d)
+Pivot::Pivot(float PosX, float PosY)
 {
-    left  = l;
-    right = r;
-    up    = u;
-    down  = d;
-
     BBox(new Rect(-4, -4, 4, 4));
     type = PIVOT;
+    MoveTo(PosX, PosY);
 }
 
 // ---------------------------------------------------------------------------------
 
 Pivot::~Pivot()
 {
+}
+
+void Pivot::OnCollision(Object* obj)
+{
+    if (obj->Type() == BLOCK) {
+        filled = true;
+    };
 }
 
 // ---------------------------------------------------------------------------------

@@ -16,10 +16,7 @@
 
 enum PacManObjects
 {
-    PLAYER,
-    GHOST,
-    FOOD,
-    SPECIAL,
+    BLOCK,
     PIVOT
 };
 

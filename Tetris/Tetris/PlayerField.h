@@ -18,6 +18,7 @@
 #include "Types.h"                      // tipos específicos da engine
 #include "Object.h"                     // interface de Object
 #include "Sprite.h"                     // interface de Sprites
+#include "Pivot.h"  
 
 // ---------------------------------------------------------------------------------
 
