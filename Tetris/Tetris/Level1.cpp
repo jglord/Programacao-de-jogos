@@ -31,7 +31,7 @@ void Level1::Init()
     // cria playerfield
     playerField = new Playerfield();
     block2 = new Block2(BLOCKTYPE1);
-    scene->Add(block2, MOVING);
+    scene->Add(block2, STATIC);
 
     for (int i = 0; i < 4; i++) {
         scene->Add(block2->blocks[i], MOVING);
