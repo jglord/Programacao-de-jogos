@@ -12,6 +12,7 @@
 #include "Engine.h"
 #include "Resources.h"
 #include "Home.h"
+#include "Level1.h"
 
 // ------------------------------------------------------------------------------
 //                                  WinMain                                      
@@ -23,7 +24,7 @@ int APIENTRY WinMain(_In_ HINSTANCE hInstance, _In_opt_ HINSTANCE hPrevInstance,
 
     // configura a janela do jogo
     engine->window->Mode(WINDOWED);
-    engine->window->Size(960, 720);
+    engine->window->Size(1200, 768);
     engine->window->Color(25, 25, 25);
     engine->window->Title("Tetris");
     engine->window->Icon(IDI_ICON);
