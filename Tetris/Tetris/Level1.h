@@ -30,10 +30,12 @@ class Level1 : public Game
 private:
     Playerfield * playerField = nullptr; // playerfield
     Sprite * backg = nullptr;       // background
-    Pivot* pivot1 = nullptr;
+    Pivot* pivots[20][10];
 
     Scene  * scene = nullptr;       // gerenciador de cena
     Block* block = nullptr;
+
+    float X, Y;                     // atributos para guardar posições do pivot
 
     bool viewBBox = false;          // habilita visualização da bounding box
     bool ctrlKeyB = false;          // controle da tecla B
