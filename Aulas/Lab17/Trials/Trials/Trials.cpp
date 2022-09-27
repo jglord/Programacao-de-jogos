@@ -50,7 +50,6 @@ void Trials::Init()
 }
 
 // ------------------------------------------------------------------------------
-
 void Trials::Update()
 {
     // fecha a janela ao pressionar ESC
