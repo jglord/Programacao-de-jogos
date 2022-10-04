@@ -17,7 +17,7 @@
 Explosion::Explosion(TileSet * tiles)
 {
     anim = new Animation(tiles, 0.015f, false);
-    //BBox(new Circle(12.0f));
+    BBox(new Circle(20.0f));
 }
 
 // ---------------------------------------------------------------------------------

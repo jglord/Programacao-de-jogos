@@ -96,23 +96,22 @@ void Player::Update()
     // ----------------------------------------------------
 	if (gravity == NORMAL) {
         Translate(0, 300 * gameTime);
-		// incremento da frequência
-		if (freq < 1.10000) {
-			freq += 0.20f * gameTime;
-			// atualização da frequência
-			Platformer::audio->Frequency(MUSIC, freq);
+		if (freq <= 1.1){
+			freq += 0.25f * gameTime;						// Incremento da frequência
+			Platformer::audio->Frequency(MUSIC, freq);		// Atualização da frequência
 		}
-		
 	}
 	else {
         Translate(0, -300 * gameTime);
-		if (freq > 0.90000 ) {
-			freq -= 0.20f * gameTime;
-			Platformer::audio->Frequency(MUSIC, freq);
+		if (freq >= 0.9) {
+			freq -= 0.25f * gameTime;						// Decremento da frequência
+			Platformer::audio->Frequency(MUSIC, freq);		// Atualização da frequência
 		}
 	}
+
+	// Mostrando frequencia
 	stringstream s;
-	s << "Freq - " << freq << endl;
+	s << "Frequencia:  " << freq << endl;
 	OutputDebugString(s.str().c_str());
     // atualiza animação
     anim->Select(gravity);
