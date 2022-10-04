@@ -39,9 +39,15 @@ private:
     Sprite * dot = nullptr;             // sprite de um ponto
     TileSet * braidSet = nullptr;       // folha de sprites do personagem
     Animation * anim = nullptr;         // animação do pulo
-    
+
+	Controller* gamepad = nullptr;     // controle de jogo
+
     Timer jumpTimer;                    // controla tempo do pulo
     Timer dotTimer;                     // controla exibição do rastro
+
+	bool controllerOn = false;          // controle directinput ativado
+	bool xboxOn = false;                // controle xinput ativado
+	uint xboxPlayer = PLAYER1;          // controle Xbox ativo            
 
     vector<Coord> trail;                // vetor de coordenadas
     bool jumping = false;               // personagem está pulando

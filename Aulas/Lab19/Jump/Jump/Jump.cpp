@@ -16,6 +16,16 @@
 
 void Jump::Init()
 {
+	// cria gerenciador de controles
+	gamepad = new Controller();
+
+	// tenta inicializar um controle do xbox
+	xboxOn = gamepad->XboxInitialize(xboxPlayer);
+
+	// se falhar, tenta inicializar um controle qualquer
+	if (!xboxOn)
+		controllerOn = gamepad->Initialize();
+
     // carrega sprites e cria animação
     braidSet = new TileSet("Resources/Braid.png", 120, 140, 9, 9);
     anim = new Animation(braidSet, 0.250f, false);
@@ -62,48 +72,52 @@ void Jump::Update()
         {
             anim->NextFrame();
 
-            if (jumpTimer.Elapsed(1.0f))
-            {
-                // descida
-                velY = 100.0f;
-
-            }
-            else
-            {
-                // subida
-                velY = -100.0f;
-            }
+			if (jumpTimer.Elapsed(1.0f))
+			{
+				// descida
+				velX += -100 * gameTime;
+				velY += 100 * gameTime;
+			}
+			else
+			{
+				// subida
+				velX += 100 * gameTime;
+				velY += 100 * gameTime;
+			}
         }
     }
     else
     {
-         if (window->KeyPress(VK_SPACE))
-        {
-            // inicia pulo
-            velX = 100;
-            velY = -200;
-            
-            // adiciona coordenada atual no rastro
-            trail.push_back({ posX - 40, posY + 70 });
-            
-            // salva posição atual
-            oldX = posX;
-            oldY = posY;
+        if (controllerOn)
+		{
+			gamepad->UpdateState();
 
-            // inicia temporizadores
-            jumpTimer.Start();
-            dotTimer.Start();
-            jumping = true;
+			if (gamepad->ButtonDown(2)) {
+				// inicia pulo
+				velX = 100;
+				velY = -100;
+            
+				// adiciona coordenada atual no rastro
+				trail.push_back({ posX - 40, posY + 70 });
+            
+				// salva posição atual
+				oldX = posX;
+				oldY = posY;
+
+				// inicia temporizadores
+				jumpTimer.Start();
+
+				dotTimer.Start();
+				jumping = true;
+			}
+
+			// move personagem com analógicos
+			posX += gamepad->Axis(AxisX) * gameTime / 5;
+			posY += gamepad->Axis(AxisY) * gameTime / 5;
+			posX += gamepad->Axis(AxisX) * gameTime / 5;
+			posY += gamepad->Axis(AxisY) * gameTime / 5;
+
         }
-
-        if (window->KeyDown(VK_LEFT))
-            posX -= 200 * gameTime;
-        if (window->KeyDown(VK_RIGHT))
-            posX += 200 * gameTime;
-        if (window->KeyDown(VK_UP))
-            posY -= 200 * gameTime;
-        if (window->KeyDown(VK_DOWN))
-            posY += 200 * gameTime;
     }
     
     // atualiza posição do personagem 
