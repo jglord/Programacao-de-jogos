@@ -27,6 +27,7 @@ Cars::Cars()
     // --- ajuste a posição inicial do carro ---
 
     // --- ajuste a escala inicial do carro ---
+	ScaleTo(0.1);
 }
 
 // ---------------------------------------------------------------------------------
@@ -63,7 +64,7 @@ void Cars::Update()
 void Cars::Draw()
 {
     // --- desenha carro usando a escala definida ---
-
+	sprite->Draw(window->CenterX(), y, z, scale);
 }
 
 // -------------------------------------------------------------------------------

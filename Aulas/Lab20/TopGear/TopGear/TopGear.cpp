@@ -49,7 +49,9 @@ void TopGear::Init()
     // cria e adiciona carros adversários na cena
     Cars * cars1 = new Cars();
     scene->Add(cars1, STATIC);
-	cars1->posY = 50;
+	//cars1->posY = 50;
+
+
     // inicia música e motor do carro
     audio->Volume(ENGINE, 0.25f);
     audio->Play(MUSIC, true);    
