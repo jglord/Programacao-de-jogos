@@ -27,8 +27,8 @@ private:
     float deltaX;                   // valor do deslocamento eixo X
     float deltaY;                   // valor do deslocamento eixo Y
     float speed;                    // velocidade do carro
-
 public:
+	float posY = NULL;
     Cars();                         // construtor
     ~Cars();                        // destrutor
 

@@ -24,7 +24,6 @@ Cars::Cars()
 
     // velocidade inicial do carro
     speed = 100;
-
     // --- ajuste a posição inicial do carro ---
 
     // --- ajuste a escala inicial do carro ---
@@ -55,7 +54,7 @@ void Cars::Update()
     {
         // restaura posição e escala do início da pista
         ScaleTo(0.1f);
-        MoveTo(window->CenterX(), 246);
+        MoveTo(window->CenterX(), posY);
     }
 }
 
