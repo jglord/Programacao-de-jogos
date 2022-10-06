@@ -48,13 +48,13 @@ void Cars::Update()
     Translate(deltaX, deltaY);
 
     // --- aumente a escala de acordo com a distância percorrida ---
-    
+	Scale(scale + 0.1);
     
     // verifica a distância do carro para o início da pista
     if (y - 246 >= 500)
     {
         // restaura posição e escala do início da pista
-        ScaleTo(0.1f);
+        //ScaleTo(0.1f);
         MoveTo(window->CenterX(), posY);
     }
 }
